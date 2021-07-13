@@ -1,49 +1,4 @@
 
-@font-face {
-    font-family: 'Shrikhand';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Shrikhand Regular'), url('Fonts/Shrikhand/Shrikhand-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: '2Dumb';
-    src: url('Fonts/2Dumb/2Dumb-webfont.eot');
-    src: url('Fonts/2Dumb/2Dumb-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Fonts/2Dumb/2Dumb-webfont.woff2') format('woff2'),
-         url('Fonts/2Dumb/2Dumb-webfont.woff') format('woff'),
-         url('Fonts/2Dumb/2Dumb-webfont.ttf') format('truetype'),
-         url('Fonts/2Dumb/2Dumb-webfont.svg#2dumbregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'robotobold';
-    src: url('Fonts/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.eot');
-    src: url('Fonts/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Fonts/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.woff2') format('woff2'),
-         url('Fonts/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.woff') format('woff'),
-         url('Fonts/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.ttf') format('truetype'),
-         url('Fonts/Roboto/roboto_bold_macroman/Roboto-Bold-webfont.svg#robotobold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'robotoregular';
-    src: url('Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot');
-    src: url('Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
-         url('Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
-         url('Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 *  {
     box-sizing: border-box;
@@ -55,8 +10,8 @@ html {
 
 body {
     display: flex;
-    font-family: '2Dumb', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
     margin: 0;
+    font-family: $font-text;
 }
 
 a {
@@ -65,6 +20,5 @@ a {
 }
 
 .font-logo {
-    color: pink;
-    /*font-family: 'robotoregular';*/
+    font-family: $font-logo;
 }
