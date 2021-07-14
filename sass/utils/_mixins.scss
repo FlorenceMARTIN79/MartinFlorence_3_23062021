@@ -1,0 +1,14 @@
+@mixin footer-padding  {
+    padding-left : 19px;
+    padding-right: 19px;
+}
+
+@mixin paragraphs-margin {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@mixin block-margin{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}

@@ -14,8 +14,12 @@
     font-family: 'Shrikhand';
     font-style: normal;
     font-weight: normal;
-    src: url('../../Fonts/Shrikhand/Shrikhand-Regular.woff') format('woff');
-    }
+    src:    url('../../Fonts/Shrikhand/Shrikhand-Regular.woff') format('woff'),
+            url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.eot') format('eot'),
+            url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.svg') format('svg'),
+            url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.ttf') format('ttf'),
+            url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.woff2') format('woff2');
+}
 
 /*color variables*/
 $color-primary:#9356DC;

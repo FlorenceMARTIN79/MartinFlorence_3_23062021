@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    max-width: 100%;
+    @include footer-padding;
+    
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+    }
+    img {
+        object-fit: contain;
+        width: 50%;
+    }
+
+    a {
+        color: black;
+    }
+}
+
+.header__logo {
+    object-fit: contain;
+    @include block-margin;
+    
+}
+

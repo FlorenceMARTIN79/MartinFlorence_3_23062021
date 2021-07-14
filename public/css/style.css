@@ -9,7 +9,7 @@
   font-family: "Shrikhand";
   font-style: normal;
   font-weight: normal;
-  src: url("../../Fonts/Shrikhand/Shrikhand-Regular.woff") format("woff");
+  src: url("../../Fonts/Shrikhand/Shrikhand-Regular.woff") format("woff"), url("../../Fonts/Shrikhand/shrikhand-v6-latin-regular.eot") format("eot"), url("../../Fonts/Shrikhand/shrikhand-v6-latin-regular.svg") format("svg"), url("../../Fonts/Shrikhand/shrikhand-v6-latin-regular.ttf") format("ttf"), url("../../Fonts/Shrikhand/shrikhand-v6-latin-regular.woff2") format("woff2");
 }
 /*color variables*/
 /*font variables*/
@@ -29,18 +29,115 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+}
+
+img {
+  max-width: 100%;
 }
 
 .font-logo {
   font-family: "Shrikhand";
 }
 
+header {
+  display: flex;
+  max-width: 100%;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+header .logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header img {
+  object-fit: contain;
+  width: 50%;
+}
+header a {
+  color: black;
+}
+
+.header__logo {
+  object-fit: contain;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 footer {
+  padding-left: 19px;
+  padding-right: 19px;
   background-color: black;
   color: white;
   display: flex;
   flex-direction: column;
+  letter-spacing: 2px;
+}
+footer a {
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+footer i {
+  width: 1.5rem;
+  text-align: center;
+}
+
+/*index header layout*/
+.index-header {
+  flex-direction: column;
+}
+.index-header .logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.index-header img {
+  object-fit: contain;
+  width: 50%;
+}
+.index-header .header-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.index-header .header-home-place {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.index-header i {
+  margin-right: 1rem;
+}
+
+/*index main layout*/
+.index-main {
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.fonctionnement-detail {
+  display: flex;
+  align-items: center;
+}
+.fonctionnement-detail i {
+  width: 2rem;
+  color: grey;
+}
+.fonctionnement-detail i:hover {
+  color: #9356DC;
+}
+.fonctionnement-detail span {
+  width: 2rem;
+  color: #9356DC;
+}
+.fonctionnement-detail a, .fonctionnement-detail p {
+  color: black;
+}
+
+.restaurant-header {
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */

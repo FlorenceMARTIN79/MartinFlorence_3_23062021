@@ -1,7 +1,20 @@
 footer {
+    @include footer-padding;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
+    letter-spacing: 2px;
+
+    a {
+        color: white;
+        @include paragraphs-margin;
+    }
+
+    i {
+        width: 1.5rem;
+        text-align: center;
+    }
+
 }
 
