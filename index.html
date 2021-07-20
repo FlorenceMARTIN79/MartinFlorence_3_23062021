@@ -21,7 +21,7 @@
                 <div class="header-home">
                     <div class="header-home-place">
                         <label for="lieu"><i class="fas fa-map-marker-alt"></i></label>
-                        <input type="search" name="lieu" id="lieu" placeholder="Paris,Belleville" autofocus />
+                        <input type="search" name="lieu" id="lieu" placeholder="Paris, Belleville" disabled />
                     </div>
                     <div class="header-home-title">
                         <h2 class="section-title">
@@ -30,13 +30,14 @@
                         <p class="p__comment">
                             Découvrez des restaurants d'exception, séléctionnés par nos soins
                         </p>
+                        <div class="header-home-explore">
+                            <button type="submit" disabled value="Explorer nos restaurants"
+                                class="header-home-explore__btn">
+                                <span>Explorer nos restaurants</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="header-home-explore">
-                        <button type="submit" disabled value="Explorer nos restaurants"
-                            class="header-home-explore__btn">
-                            <span>Explorer nos restaurants</span>
-                        </button>
-                    </div>
+                    
                 </div>
             </header>
 
@@ -47,13 +48,13 @@
                         Fonctionnement
                     </h2>
                     <div class="section__fonctionnement">
-                        <a href="#main__section-title-restaurants" class="fonctionnement-detail" >
+                        <div class="section__fonctionnement fonctionnement-detail" >
                             <span class="fonctionnement-detail__number">1</span>
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-mobile-alt logo-mobile"></i>
                             <p class="p__filters">
                               Choisissez un restaurant  
                             </p>
-                        </a>
+                        </div>
                         <div class="section__fonctionnement fonctionnement-detail">
                             <span class="fonctionnement-detail__number">2</span>
                             <i class="fas fa-list-ul"></i>
@@ -78,24 +79,36 @@
                             <img    src="Images/restaurants/ohmyfood-la-palette-du-gout.jpg"
                                     alt="photo du restaurant La Palette du Goût à Ménilmontant">
                             <div class="restaurants__comment">
-                                <h3 class="restaurants__name card-title">
-                                    La palette du goût
-                                </h3>
-                                <p class="p__comment comment__city">
-                                    Ménilmontant
-                                </p>                                
+                                <div class="restaurants__comment-address">
+                                    <h3 class="restaurants__name card-title">
+                                        La palette du goût
+                                    </h3>
+                                    <p class="p__comment comment__city">
+                                        Ménilmontant
+                                    </p>
+                                </div>
+                                <div class="restaurants__comment-rating">
+                                    <i class="far fa-heart rating-nolike"></i>
+                                    <i class="fas fa-heart rating-like"></i>
+                                </div>                               
                             </div>        
                         </a>
                         <a href="page-restaurant-lanoteenchantee.html" class="card restaurants__card">
                             <img    src="Images/restaurants/ohmyfood-la-note-enchantee.jpg"
                                     alt="photo du restaurant La Note Enchantée à Charonne">
                             <div class="restaurants__comment">
-                                <h3 class="restaurants__name card-title">
-                                    La note enchantée
-                                </h3>
-                                <p class="p__comment comment__city">
-                                    Charonne
-                                </p>                                
+                                <div class="restaurants__comment-address">
+                                    <h3 class="restaurants__name card-title">
+                                        La note enchantée
+                                    </h3>
+                                    <p class="p__comment comment__city">
+                                        Charonne
+                                    </p>  
+                                </div>
+                                <div class="restaurants__comment-rating">
+                                    <i class="far fa-heart rating-nolike"></i>
+                                    <i class="fas fa-heart rating-like"></i>
+                                </div>      
                             </div>        
                         </a>
                         <a href="page-restaurant-alafrancaise.html" class="card 
@@ -103,24 +116,36 @@
                             <img    src="Images/restaurants/ohmyfood-a-la-francaise.jpg"
                                     alt="photo du restaurant A La Française à Cité Rouge">
                             <div class="restaurants__comment">
-                                <h3 class="restaurants__name card-title">
-                                    À la Française
-                                </h3>
-                                <p class="p__comment comment__city">
-                                    Cité Rouge
-                                </p>                                
+                                <div class="restaurants__comment-address">
+                                    <h3 class="restaurants__name card-title">
+                                        À la Française
+                                    </h3>
+                                    <p class="p__comment comment__city">
+                                        Cité Rouge
+                                    </p>    
+                                </div>
+                                <div class="restaurants__comment-rating">
+                                    <i class="far fa-heart rating-nolike"></i>
+                                    <i class="fas fa-heart rating-like"></i>
+                                </div>                                   
                             </div>        
                         </a>
                         <a href="page-restaurant-ledelicedessens.html" class="card restaurants__card">
                             <img    src="Images/restaurants/ohmyfood-le-delice-des-sens.jpg"
                                     alt="photo du restaurant Le Délice Des Sens à Folie-Méricourt">
                             <div class="restaurants__comment">
-                                <h3 class="restaurants__name card-title">
-                                    Le délice des sens
-                                </h3>
-                                <p class="p__comment comment__city">
-                                    Folie-Méricourt
-                                </p>                                
+                                <div class="restaurants__comment-address">
+                                    <h3 class="restaurants__name card-title">
+                                        Le délice des sens
+                                    </h3>
+                                    <p class="p__comment comment__city">
+                                        Folie-Méricourt
+                                    </p>      
+                                </div>
+                                <div class="restaurants__comment-rating">
+                                    <i class="far fa-heart rating-nolike"></i>
+                                    <i class="fas fa-heart rating-like"></i>
+                                </div>                           
                             </div>        
                         </a>
                     </article>

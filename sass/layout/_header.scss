@@ -1,7 +1,8 @@
 header {
     display: flex;
     max-width: 100%;
-    @include footer-padding;
+    margin-top: 0.5rem;
+    /*@include footer-padding;*/
     
     .logo {
         width: 100%;
@@ -22,6 +23,6 @@ header {
 .header__logo {
     object-fit: contain;
     @include block-margin;
-    
+    height: 8vh;
 }
 

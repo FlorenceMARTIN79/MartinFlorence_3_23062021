@@ -25,42 +25,198 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        background-color: #eaeaea;
+        height: 8vh;
     }
 
-    i {
-        margin-right: 1rem;
+    label {
+        display: flex;
+        justify-content: center;
+    }
+
+    #lieu {
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 45%;
+    }
+
+    ::placeholder {
+        color: black;
+        text-align: center;
+    }
+
+}
+
+.header-home-title {
+    background-color: #f6f6f6;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
+
+    h2 {
+        margin-top: 0;
+        font-weight: bold;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .p__comment {
+        font-size: 1.2rem;
     }
 
 }
 
 /*index main layout*/
 
-.index-main {
+/*.index-main {
     @include footer-padding;
 
 }
 
+
+/*fonctionnement section layout*/
+#main-fonctionnement {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    @include footer-padding;
+}
+
+.section__fonctionnement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+}
+
 .fonctionnement-detail {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+    background-color: #f6f6f6;
+    height: 30%;
+    border-radius: 20px;
+    box-shadow:  0 5px 5px #eaeaea;
+    position: relative;
+    padding-left: 2rem;
 
     i {
         width: 2rem;
         color: grey;
-        &:hover {
-            color: $color-primary;
-        }
+    }
+    
+    .logo-mobile {
+        font-size: 1.3rem;
     }
 
     span {
-        width: 2rem;
-        color: $color-primary;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-size: 0.9rem;
+        background-color: $color-primary;
+        border-radius: 50%;
+        height: 1.7rem;
+        width: 1.7rem;
+        position: absolute;
+        left: -1rem;
     }
 
-    a, p {
-        color: black;
-      
+    p {
+        font-weight: bold;
+        font-size: 1.1rem;
     }
-
-    
+       
 }
+
+.fonctionnement-detail:hover  {
+    background-color: lighten($color-primary, 33%);
+
+    i {
+        color: $color-primary;    }
+}
+
+/*restaurants section layout*/
+#main__restaurants {
+    padding-top: 3rem;
+    background-color: #f6f6f6;
+    padding-right: 0;
+
+    &>* {
+        @include footer-padding;
+    }
+}
+
+.section-title {
+    margin-top: 0;
+}
+
+.section__restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.restaurants__card {
+    background-color: white;
+    height: 40vh;
+    margin-bottom: 1rem;
+    border-radius: 17px;
+    cursor: pointer;
+
+    h3, p {
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+        color: black;
+        padding-left: 1rem;
+    }
+
+    img {
+        object-fit:cover;
+        width: 100%;
+        height: 30vh;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .restaurants__comment {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+
+    .rating-like, .rating-nolike {
+        /*visibility: hidden;*/
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .rating-like {
+        visibility: hidden;    
+    }
+
+    }
+}
+
+.restaurants__comment-rating {
+    padding-right: 1rem;
+    align-self: center;
+    font-size: 1.5rem;
+    color: black;    
+
+    &:hover {
+        visibility: hidden;
+    }
+        
+        .rating-like {
+            visibility: visible;
+    }
+
+}
+
+
+
