@@ -1,3 +1,80 @@
 .restaurant-header {
     flex-direction: row;
 }
+
+/*main layout*/
+.restaurant-main {
+    background-color: #eaeaea;
+    border-radius: 30px 30px 0 0;
+}
+
+.restaurant_photo {
+    height: 30vh;
+    overflow: hidden;
+}
+
+.restaurant_comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 30px 30px 0 0;
+    border: 1px red solid;
+    @include footer-padding;
+
+    h1,
+    i {
+        margin-top: 0;
+        padding-top: 2rem;
+    }
+}
+
+.main__menu {
+    @include footer-padding;
+
+    .article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu__one-dish {
+        display: flex;
+        height: 10vh;
+        margin-top: 1rem;
+        background-color: white;
+        border-radius: 15px;
+        padding-left: 0.5rem;
+    }
+
+    .menu-dish {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .menu_price {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 0.5rem;
+        flex-direction: row;
+        width: 20%;
+    }
+
+    h3,
+    p {
+        margin: 0;
+    }
+}
+
+.main__order {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+
+    .page-restaurant-main__btn-order {
+        width: 12rem;
+
+    }
+}
