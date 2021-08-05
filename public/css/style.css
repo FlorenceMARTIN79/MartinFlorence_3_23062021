@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "robotoregular";
   src: url("../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot");
@@ -39,6 +40,7 @@ img {
   font-family: "Shrikhand";
 }
 
+/*layout of the buttons*/
 button {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   border: none;
@@ -50,6 +52,65 @@ button {
   padding-right: 20px;
   cursor: pointer;
   font-size: 1rem;
+}
+
+/*layout of the hearts for the rating*/
+.restaurants__comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 25%;
+  /*.rating-like,*/
+  /* .rating-nolike {
+      /*visibility: hidden;*/
+  /*}*/
+}
+.restaurants__comment-rating {
+  padding-right: 1rem;
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+.restaurants__comment-rating {
+  /* padding-right: 1rem;
+   align-self: center;
+   font-size: 1.5rem;*/
+}
+.restaurants__comment-rating:hover {
+  /*visibility: hidden;*/
+}
+.restaurants__comment-rating .rating-like {
+  visibility: hidden;
+  color: green;
+}
+
+.rating-nolike {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 0;
+  color: #000000;
+  /*linear-gradient(to top, $color-primary, $color-secondary);*/
+}
+
+.rating-nolike:hover {
+  color: white;
+  /*border: 2px orange solid;*/
+}
+.rating-nolike:hover::after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header {
@@ -297,37 +358,6 @@ footer span {
   color: #278870;
   font-size: 0.9rem;
   font-weight: bold;
-}
-.restaurants__card .restaurants__comment {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  height: 25%;
-}
-.restaurants__card .restaurants__comment .rating-like,
-.restaurants__card .restaurants__comment .rating-nolike {
-  /*visibility: hidden;*/
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-}
-.restaurants__card .restaurants__comment .rating-like {
-  visibility: hidden;
-}
-
-.restaurants__comment-rating {
-  padding-right: 1rem;
-  align-self: center;
-  font-size: 1.5rem;
-  color: black;
-}
-.restaurants__comment-rating:hover {
-  visibility: hidden;
-}
-.restaurants__comment-rating .rating-like {
-  visibility: visible;
 }
 
 .restaurant-header {

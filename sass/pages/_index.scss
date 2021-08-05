@@ -216,42 +216,6 @@
         font-weight: bold;
 
     }
-
-    .restaurants__comment {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        height: 25%;
-
-        .rating-like,
-        .rating-nolike {
-            /*visibility: hidden;*/
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-        }
-
-        .rating-like {
-            visibility: hidden;
-        }
-
-    }
 }
+    
 
-.restaurants__comment-rating {
-    padding-right: 1rem;
-    align-self: center;
-    font-size: 1.5rem;
-    color: black;
-
-    &:hover {
-        visibility: hidden;
-    }
-
-    .rating-like {
-        visibility: visible;
-    }
-
-}
