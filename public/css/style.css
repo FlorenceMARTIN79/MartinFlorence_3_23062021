@@ -60,12 +60,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   height: 25%;
-  /*.rating-like,*/
-  /* .rating-nolike {
-      /*visibility: hidden;*/
-  /*}*/
 }
 .restaurants__comment-rating {
   padding-right: 1rem;
@@ -73,46 +68,67 @@ button {
   font-size: 1.5rem;
 }
 
-.restaurants__comment-rating {
-  /* padding-right: 1rem;
-   align-self: center;
-   font-size: 1.5rem;*/
-}
-.restaurants__comment-rating:hover {
-  /*visibility: hidden;*/
-}
-.restaurants__comment-rating .rating-like {
-  visibility: hidden;
-  color: green;
-}
-
 .rating-nolike {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  z-index: 0;
-  color: #000000;
-  /*linear-gradient(to top, $color-primary, $color-secondary);*/
-}
-
-.rating-nolike:hover {
-  color: white;
-  /*border: 2px orange solid;*/
+  color: red;
+  z-index: 1;
+  position: relative;
 }
 .rating-nolike:hover::after {
+  opacity: 1;
+}
+.rating-nolike::after {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
   display: block;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
-  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: white;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 2000ms;
 }
 
+/*.restaurants__comment-rating {
+   /* padding-right: 1rem;
+    align-self: center;
+    font-size: 1.5rem;*/
+/*}
+
+.rating-nolike {
+    position: relative;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1;
+    color: #000000;/*linear-gradient(to top, $color-primary, $color-secondary);*/
+/*}
+
+/*.rating-nolike:hover {
+    color: white;
+
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f004";
+        font-weight: 900; 
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index:1;
+        background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+
+    /*border: 2px orange solid;*/
+/*}*/
 header {
   display: flex;
   max-width: 100%;
