@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "robotoregular";
   src: url("../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot");
@@ -39,6 +40,7 @@ img {
   font-family: "Shrikhand";
 }
 
+/*layout of the buttons*/
 button {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   border: none;
@@ -52,6 +54,79 @@ button {
   font-size: 1rem;
 }
 
+/*layout of the hearts for the rating*/
+.restaurants__comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 25%;
+}
+.restaurants__comment-rating {
+  padding-right: 1rem;
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+.rating-nolike {
+  color: #242323;
+  transform: scale(1);
+  z-index: 0;
+  position: relative;
+}
+.rating-nolike:hover::after {
+  opacity: 1;
+}
+.rating-nolike::after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.07);
+  opacity: 0;
+  z-index: 2;
+  transition-property: opacity transform;
+  transition-duration: 2000ms;
+}
+
+/*.restaurants__comment-rating {
+   /* padding-right: 1rem;
+    align-self: center;
+    font-size: 1.5rem;*/
+/*}
+
+.rating-nolike {
+    position: relative;
+    right: 1rem;
+    top: 1rem;
+
+
+
+/*}
+
+/*.rating-nolike:hover {
+
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f004";
+        font-weight: 900; 
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+
+    }
+
+
+/*}*/
 header {
   display: flex;
   max-width: 100%;
@@ -297,37 +372,6 @@ footer span {
   color: #278870;
   font-size: 0.9rem;
   font-weight: bold;
-}
-.restaurants__card .restaurants__comment {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  height: 25%;
-}
-.restaurants__card .restaurants__comment .rating-like,
-.restaurants__card .restaurants__comment .rating-nolike {
-  /*visibility: hidden;*/
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-}
-.restaurants__card .restaurants__comment .rating-like {
-  visibility: hidden;
-}
-
-.restaurants__comment-rating {
-  padding-right: 1rem;
-  align-self: center;
-  font-size: 1.5rem;
-  color: black;
-}
-.restaurants__comment-rating:hover {
-  visibility: hidden;
-}
-.restaurants__comment-rating .rating-like {
-  visibility: visible;
 }
 
 .restaurant-header {
