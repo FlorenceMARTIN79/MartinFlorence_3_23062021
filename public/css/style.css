@@ -14,6 +14,7 @@
 }
 /*color variables*/
 /*font variables*/
+/*media queries maps*/
 * {
   box-sizing: border-box;
 }
@@ -164,18 +165,45 @@ footer {
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
+footer .footer_parts {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1400px) {
+  footer .footer_parts {
+    flex-direction: row;
+  }
+}
 footer a {
   color: white;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+@media screen and (min-width: 1400px) {
+  footer a {
+    width: 23%;
+    display: flex;
+    justify-content: center;
+  }
+}
 footer i {
   width: 1.5rem;
   text-align: center;
 }
+@media screen and (min-width: 1400px) {
+  footer i {
+    width: 15%;
+  }
+}
 footer h2 {
   font-size: 1.2rem;
   letter-spacing: 2px;
+}
+@media screen and (min-width: 1400px) {
+  footer h2 {
+    display: flex;
+    justify-content: center;
+  }
 }
 footer span {
   font-size: 1rem;
@@ -260,6 +288,12 @@ footer span {
   justify-content: space-between;
   height: 40vh;
 }
+@media screen and (min-width: 1400px) {
+  .section__fonctionnement {
+    flex-direction: row;
+    height: auto;
+  }
+}
 
 .fonctionnement-detail {
   display: flex;
@@ -272,6 +306,11 @@ footer span {
   box-shadow: 0 5px 5px #eaeaea;
   position: relative;
   padding-left: 2rem;
+}
+@media screen and (min-width: 1400px) {
+  .fonctionnement-detail {
+    width: 30%;
+  }
 }
 .fonctionnement-detail i {
   width: 2rem;
@@ -326,6 +365,11 @@ footer span {
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (min-width: 1400px) {
+  .section__restaurants {
+    flex-direction: row;
+  }
+}
 
 .restaurants__card {
   background-color: white;
@@ -333,6 +377,11 @@ footer span {
   margin-bottom: 1rem;
   border-radius: 17px;
   cursor: pointer;
+}
+@media screen and (min-width: 1400px) {
+  .restaurants__card {
+    width: 23%;
+  }
 }
 .restaurants__card h3,
 .restaurants__card p {

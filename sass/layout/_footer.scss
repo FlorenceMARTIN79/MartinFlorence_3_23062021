@@ -6,20 +6,44 @@ footer {
     flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 2rem;
-    
+
+    .footer_parts {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+
     a {
         color: white;
         @include paragraphs-margin;
+
+        @include desktop {
+            width: 23%;
+            display: flex;
+            justify-content: center;
+        }
     }
 
     i {
         width: 1.5rem;
         text-align: center;
+
+        @include desktop {
+            width: 15%;
+        }
     }
 
     h2 {
         font-size: 1.2rem;
         letter-spacing: 2px;
+
+        @include desktop {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     span {

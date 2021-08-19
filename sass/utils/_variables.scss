@@ -30,3 +30,9 @@ $resto-bg-color:#f6f6f6;
 /*font variables*/
 $font-logo: 'Shrikhand';
 $font-text: "robotoregular";
+
+/*media queries maps*/
+$breakpoints: (
+    desktop: 1400px,
+    tablet: 416px
+);

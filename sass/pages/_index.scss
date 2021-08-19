@@ -88,6 +88,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 40vh;
+
+    @include desktop {
+        flex-direction: row;
+        height: auto;
+    }
 }
 
 .fonctionnement-detail {
@@ -101,6 +106,10 @@
     box-shadow: 0 5px 5px #eaeaea;
     position: relative;
     padding-left: 2rem;
+
+    @include desktop {
+        width: 30%;
+    }
 
     i {
         width: 2rem;
@@ -150,6 +159,7 @@
     &>* {
         @include footer-padding;
     }
+
 }
 
 .section-title {
@@ -161,6 +171,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include desktop {
+        flex-direction: row;
+    }
+
 }
 
 .restaurants__card {
@@ -169,6 +183,10 @@
     margin-bottom: 1rem;
     border-radius: 17px;
     cursor: pointer;
+
+    @include desktop {
+        width: 23%;
+    }
 
     h3,
     p {
