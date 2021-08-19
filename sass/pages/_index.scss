@@ -50,7 +50,7 @@
 }
 
 .header-home-title {
-    background-color: #f6f6f6;
+    background-color: $resto-bg-color;
     padding-top: 3rem;
     padding-bottom: 3rem;
     width: 100%;
@@ -95,7 +95,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: #f6f6f6;
+    background-color: $resto-bg-color;
     height: 30%;
     border-radius: 20px;
     box-shadow: 0 5px 5px #eaeaea;
@@ -143,7 +143,7 @@
 /*restaurants section layout*/
 #main__restaurants {
     padding-top: 3rem;
-    background-color: #f6f6f6;
+    background-color: $resto-bg-color;
     padding-right: 0;
     padding-bottom: 3rem;
 
@@ -215,6 +215,10 @@
         font-size: 0.9rem;
         font-weight: bold;
 
+    }
+
+    .restaurants__comment-address {
+        width: 80%;
     }
 }
     

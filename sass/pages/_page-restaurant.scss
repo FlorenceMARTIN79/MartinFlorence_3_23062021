@@ -43,7 +43,7 @@
     z-index:1;
     width: 100%;
     border-radius: 30px 30px 0 0;
-    background-color: #f6f6f6;
+    background-color: $resto-bg-color;
 
     @include footer-padding;
 
@@ -54,9 +54,9 @@
     }
 }
 
-.main__menu, .menu__plats, .menu__desserts {
+.main__menu/*, .menu__plats, .menu__desserts*/ {
     @include footer-padding;
-    background-color: #f6f6f6;
+    background-color: $resto-bg-color;
     text-overflow: ellipsis;
 
     h2 {
@@ -82,6 +82,8 @@
         background-color: white;
         border-radius: 15px;
         padding-left: 0.5rem;
+        position: relative;
+        z-index: 1;
     }
 
     .menu_dish {
@@ -92,6 +94,13 @@
         justify-content: space-evenly;
     }
 
+    .menu_dish-price {
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        padding-right: 1rem;
+    }
+
     .menu_price {
         display: flex;
         align-items: flex-end;
@@ -99,6 +108,13 @@
         flex-direction: row;
         width: 20%;
     }
+
+    .one-dish__selected {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+               
+    }    
 
     h3,
     p {
@@ -109,8 +125,9 @@
 .main__order {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
+    background-color: $resto-bg-color;
 
     .page-restaurant-main__btn-order {
         width: 12rem;

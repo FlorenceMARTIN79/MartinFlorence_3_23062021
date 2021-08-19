@@ -374,6 +374,9 @@ footer span {
   font-size: 0.9rem;
   font-weight: bold;
 }
+.restaurants__card .restaurants__comment-address {
+  width: 80%;
+}
 
 .restaurant-header {
   flex-direction: row;
@@ -427,25 +430,25 @@ footer span {
   padding-top: 2rem;
 }
 
-.main__menu, .menu__plats, .menu__desserts {
+.main__menu {
   padding-left: 19px;
   padding-right: 19px;
   background-color: #f6f6f6;
   text-overflow: ellipsis;
 }
-.main__menu h2, .menu__plats h2, .menu__desserts h2 {
+.main__menu h2 {
   margin-top: 0;
   padding-top: 3rem;
 }
-.main__menu .article, .menu__plats .article, .menu__desserts .article {
+.main__menu .article {
   display: flex;
   flex-direction: column;
 }
-.main__menu .menu__horizontal-line, .menu__plats .menu__horizontal-line, .menu__desserts .menu__horizontal-line {
+.main__menu .menu__horizontal-line {
   width: 10%;
   border-bottom: 3px #99E2D0 solid;
 }
-.main__menu .menu__one-dish, .menu__plats .menu__one-dish, .menu__desserts .menu__one-dish {
+.main__menu .menu__one-dish {
   display: flex;
   flex-direction: row;
   height: 10vh;
@@ -453,33 +456,45 @@ footer span {
   background-color: white;
   border-radius: 15px;
   padding-left: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
-.main__menu .menu_dish, .menu__plats .menu_dish, .menu__desserts .menu_dish {
+.main__menu .menu_dish {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   justify-content: space-evenly;
 }
-.main__menu .menu_price, .menu__plats .menu_price, .menu__desserts .menu_price {
+.main__menu .menu_dish-price {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  padding-right: 1rem;
+}
+.main__menu .menu_price {
   display: flex;
   align-items: flex-end;
   padding-bottom: 0.5rem;
   flex-direction: row;
   width: 20%;
 }
+.main__menu .one-dish__selected {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
 .main__menu h3,
-.main__menu p, .menu__plats h3,
-.menu__plats p, .menu__desserts h3,
-.menu__desserts p {
+.main__menu p {
   margin: 0;
 }
 
 .main__order {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
+  background-color: #f6f6f6;
 }
 .main__order .page-restaurant-main__btn-order {
   width: 12rem;
