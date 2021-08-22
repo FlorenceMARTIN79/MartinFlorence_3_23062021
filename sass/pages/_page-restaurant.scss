@@ -1,3 +1,10 @@
+#container {
+
+    @include desktop {
+        width: 1400px;
+    }
+}
+
 .restaurant-header {
     flex-direction: row;
     margin-right: 2rem;
@@ -14,6 +21,10 @@
     position: relative;
     z-index: 0;
     height: 40vh;
+
+    @include desktop{
+        height: 50vh;
+    }
 }
 
 .restaurant-main {
@@ -27,7 +38,12 @@
     position: absolute;
     z-index: 1;
     top: 0;
-    
+
+    @include desktop {
+        height: 50vh;
+    }
+
+        
     img {
         width: 100%;
         object-fit: cover;  
@@ -47,10 +63,18 @@
 
     @include footer-padding;
 
+    @include tablet {
+        justify-content: space-around;
+        padding-left: 20vw;
+        padding-right: 20vw;
+        font-size: 1.5rem;
+    }
+
     h1,
     i {
         margin-top: 0;
         padding-top: 2rem;
+        align-self: baseline;
     }
 }
 
