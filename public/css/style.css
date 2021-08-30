@@ -154,11 +154,11 @@ button:hover {
 
 /*}*/
 /*layout of the button commanding the selection of the meal chosen by the customer*/
-input[type=radio].entree__first-choice {
+/*input[type="radio"]*/
+.entree, .plat, .dessert {
   display: none;
 }
-
-input[type=radio].entree__first-choice + label {
+.entree + label, .plat + label, .dessert + label {
   width: 100%;
   height: 10vh;
   border-radius: 15px;
@@ -166,11 +166,32 @@ input[type=radio].entree__first-choice + label {
   position: relative;
   z-index: 1;
   cursor: pointer;
-  background-color: red;
 }
 
-input[type=radio].entree__first-choice:checked + label {
-  background-color: green;
+.menu_dish {
+  max-width: 100%;
+}
+
+/*input[type="radio"].entree + label {
+    width: 100%;
+    height: 10vh;
+    border-radius: 15px;
+    padding-left: 0.5rem;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background-color: red;
+
+}*/
+.entree:checked + label, .plat:checked + label, .dessert:checked + label {
+  width: 75%;
+}
+.entree:checked + label + .menu_price, .plat:checked + label + .menu_price, .dessert:checked + label + .menu_price {
+  transform: translate(-100%);
+  opacity: 1;
+}
+.entree:checked + label + .one-dish__selected, .plat:checked + label + .one-dish__selected, .dessert:checked + label + .one-dish__selected {
+  opacity: 0;
 }
 
 header {
@@ -606,29 +627,18 @@ footer span {
   height: 100%;
   width: 75%;
   justify-content: space-evenly;
-  /*@include desktop {
-      .menu_dish:hover + .menu_price {
-          transform: translate(-100%);
-      }
-  }*/
 }
 .main__menu .menu_dish h3, .main__menu .menu_dish p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main__menu .menu_dish:active + .menu_price {
+.main__menu .menu_dish:hover + .menu_price {
   transform: translate(-100%);
   opacity: 1;
 }
-.main__menu .menu_dish:active {
-  width: 60%;
-}
-.main__menu .menu_dish:active + .one-dish__selected {
+.main__menu .menu_dish:hover + .one-dish__selected {
   opacity: 0;
-}
-.main__menu input[type=radio].entree__first-choice :checked + label {
-  background-color: red;
 }
 .main__menu .menu_dish-price {
   position: absolute;

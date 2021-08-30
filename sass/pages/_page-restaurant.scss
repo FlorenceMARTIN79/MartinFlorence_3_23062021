@@ -117,29 +117,17 @@
             text-overflow: ellipsis;
         }
 
-        &:active + .menu_price {
+        &:hover + .menu_price {
             transform: translate(-100%);
             opacity: 1;
         }
 
-        &:active {
-            width: 60%;
-        }
 
-        /*@include desktop {
-            .menu_dish:hover + .menu_price {
-                transform: translate(-100%);
-            }
-        }*/
-
-        &:active + .one-dish__selected {
+        &:hover + .one-dish__selected {
             opacity: 0;
         }
     }
 
-    input[type="radio"].entree__first-choice /*label*/:checked + label{
-        background-color: red;
-    }
 
 
     .menu_dish-price {
