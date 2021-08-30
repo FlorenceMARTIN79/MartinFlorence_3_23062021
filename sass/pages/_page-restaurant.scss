@@ -137,6 +137,10 @@
         }
     }
 
+    input[type="radio"].entree__first-choice /*label*/:checked + label{
+        background-color: red;
+    }
+
 
     .menu_dish-price {
         position: absolute;

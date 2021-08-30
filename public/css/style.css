@@ -153,6 +153,26 @@ button:hover {
 
 
 /*}*/
+/*layout of the button commanding the selection of the meal chosen by the customer*/
+input[type=radio].entree__first-choice {
+  display: none;
+}
+
+input[type=radio].entree__first-choice + label {
+  width: 100%;
+  height: 10vh;
+  border-radius: 15px;
+  padding-left: 0.5rem;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background-color: red;
+}
+
+input[type=radio].entree__first-choice:checked + label {
+  background-color: green;
+}
+
 header {
   display: flex;
   max-width: 100%;
@@ -606,6 +626,9 @@ footer span {
 }
 .main__menu .menu_dish:active + .one-dish__selected {
   opacity: 0;
+}
+.main__menu input[type=radio].entree__first-choice :checked + label {
+  background-color: red;
 }
 .main__menu .menu_dish-price {
   position: absolute;
