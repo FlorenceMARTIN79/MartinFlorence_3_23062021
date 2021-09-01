@@ -14,16 +14,20 @@ body {
     margin: 0;
     font-family: $font-text;
 
-    @include desktop {
-        background-color: $resto-bg-color;
-        }
+    
 }
 
 #container {
-    @include desktop{
-    /*max-width: 1400px;*/
-    margin: 10vh;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    /*@include desktop{
+    /*max-width: 1400px;*/
+    /*margin: 10vh;
+    }*/
 }
 
 a {

@@ -37,12 +37,20 @@
 
     #lieu {
         border: none;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: bold;
         width: 45%;
 
         @include tablet  {
-            width: 32%;
+            width: 40%;
+        }
+
+        @include desktop {
+            width: 20%;
+        }
+
+        @include desktop {
+            font-size: 1.5rem;
         }
     }
 
@@ -77,6 +85,14 @@
 /*.index-main {
     @include footer-padding;
 
+}*/
+
+main {
+    @include tablet {
+        width: 90vw;
+    }
+
+    
 }
 
 
@@ -94,10 +110,16 @@
     height: 40vh;
 
     @include tablet {
+        /*flex-direction: row;*/
+        /*height: auto;
+        width: 100%;*/
+        justify-content: space-between;
+    }
+
+    @include desktop  {
         flex-direction: row;
-        height: auto;
+        height: auto; 
         width: 100%;
-        justify-content: space-around;
     }
 }
 
@@ -114,8 +136,12 @@
     padding-left: 2rem;
 
     @include tablet {
-        width: 30%;
+        /*width: 30%;*/
         padding-right: 1rem;
+    }
+
+    @include desktop {
+        width: 30%;
     }
 
     i {
@@ -163,6 +189,12 @@
     background-color: $resto-bg-color;
     padding-right: 0;
     padding-bottom: 3rem;
+      
+
+    @include tablet {
+        border-radius: 15px;
+        margin-bottom: 2rem;
+    }
 
     &>* {
         @include footer-padding;
@@ -179,7 +211,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include tablet {
+    @include desktop {
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -193,9 +225,9 @@
     border-radius: 17px;
     cursor: pointer;
 
-    @include tablet {
+    /*@include tablet {
         max-width: 48%;
-    }
+    }*/
 
     @include desktop {
         width: 23%;
@@ -208,6 +240,7 @@
         margin-top: 0.5rem;
         color: black;
         padding-left: 1rem;
+        
     }
 
     .restaurants__card-photo {
@@ -228,9 +261,9 @@
         width: 100%;
     }
 
-    .restaurants-img-landscape {
+    /*.restaurants-img-landscape {
         align-self: flex-end;
-    }
+    }*/
 
     .restaurants-img-portrait {
         align-self: center;

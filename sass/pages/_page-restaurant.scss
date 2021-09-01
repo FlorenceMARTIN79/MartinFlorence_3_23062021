@@ -13,10 +13,14 @@
 .main_header {
     position: relative;
     z-index: 0;
-    height: 40vh;
+    height: 60vh;
 
+    @include tablet{
+        height: 101vh;
+    }
+    
     @include desktop{
-        height: 50vh;
+        height: 101vh;
     }
 }
 
@@ -26,14 +30,14 @@
 }
 
 .restaurant_photo {
-    height: 40vh;
+    height: 100vh;
     overflow: hidden;
     position: absolute;
     z-index: 1;
     top: 0;
 
     @include desktop {
-        height: 50vh;
+        height: 100vh;
     }
 
         
@@ -124,8 +128,14 @@
 
 
         &:hover + .one-dish__selected {
-            opacity: 0;
+            /*opacity: 0;*/
+            
+
+            & i {
+                transform: rotate(0deg);
+            }
         }
+
     }
 
 
@@ -167,6 +177,11 @@
         width: 4rem;
         border-radius: 0 15px 15px 0;
         z-index:1;
+        
+        & i {
+            transform: rotate(-360deg);
+            transition: all 500ms;
+        }
     }    
 
     h3,
