@@ -1,6 +1,6 @@
 /*layout of the buttons*/
 button {
-    background: linear-gradient(to top, $color-primary, $color-secondary);
+    background: linear-gradient(/*to top, $color-primary, $color-secondary/*180deg, $color-secondary, $color-primary 60%*/.47turn, $color-secondary, 40%, $color-primary);
     border: none;
     color: white;
     border-radius: 25px;
@@ -10,11 +10,12 @@ button {
     padding-right: 20px;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: 520;
     box-shadow: 0 5px 20px rgb(155, 154, 154);
-    opacity: 0.8;
+    opacity: 1;
 
     &:hover {
-        opacity: 1;
+        opacity: 0.8;
         transition: opacity 400ms;
     }
 }
