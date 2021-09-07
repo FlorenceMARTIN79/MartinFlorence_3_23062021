@@ -74,9 +74,11 @@ img {
 @keyframes translation {
   from {
     margin-right: 0rem;
+    opacity: 0;
   }
   to {
     margin-right: 4rem;
+    opacity: 1;
   }
 }
 /*layout of the buttons*/
@@ -208,28 +210,17 @@ button:hover {
 }*/
 .entree:checked + label, .plat:checked + label, .dessert:checked + label {
   width: 75%;
-  /*& + .menu_price {
-      transform: translate(-100%);
-      opacity: 1;
-  }*/
-  /*&/*:hover*/
-  /*+ .price > .menu_price {
-      transform: translate(-100%);
-      opacity: 1;
-  }*/
-  /*& + .one-dish__selected {
-      transform: rotate(0deg);
-
-  /*& + i {
-      transform: rotate(0deg);*/
-  /*}*/
 }
 .entree:checked + label + .price > i, .plat:checked + label + .price > i, .dessert:checked + label + .price > i {
   animation: rotation 800ms;
-  /*animation-iteration-count: 1;*/
+  animation-fill-mode: both;
 }
 .entree:checked + label + .price > .menu_price, .plat:checked + label + .price > .menu_price, .dessert:checked + label + .price > .menu_price {
   animation: translation 800ms;
+  animation-fill-mode: both;
+}
+.entree:checked + label + .price > .one-dish__selected, .plat:checked + label + .price > .one-dish__selected, .dessert:checked + label + .price > .one-dish__selected {
+  opacity: 1;
 }
 
 header {

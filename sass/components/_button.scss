@@ -140,32 +140,20 @@ button {
 .entree:checked + label, .plat:checked + label, .dessert:checked + label{
     width: 75%;
 
-    /*& + .menu_price {
-        transform: translate(-100%);
-        opacity: 1;
-    }*/
-
-    &/*:hover*/ + .price > i {
+    & + .price > i {
         animation: rotation $menu-selection_speed;
-        /*animation-iteration-count: 1;*/
+        
+        animation-fill-mode: both;
     }
-
-    /*&/*:hover*/ /*+ .price > .menu_price {
-        transform: translate(-100%);
-        opacity: 1;
-    }*/
 
     & + .price > .menu_price {
         animation: translation $menu-selection_speed;
+        animation-fill-mode: both;
     }
 
-    /*& + .one-dish__selected {
-        transform: rotate(0deg);
-
-    /*& + i {
-        transform: rotate(0deg);*/
-        
-   /*}*/
+    & + .price > .one-dish__selected {
+        opacity: 1;
+    }
 
 }
 

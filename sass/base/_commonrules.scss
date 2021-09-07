@@ -61,10 +61,12 @@ img {
 @keyframes translation  {
     from {
         margin-right: 0rem;
+        opacity: 0;
     }
 
     to {
         margin-right: 4rem;
+        opacity: 1;
     }
 
 }
