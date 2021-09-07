@@ -121,24 +121,33 @@
             text-overflow: ellipsis;
         }
 
-        &:hover + .menu_price {
-            transform: translate(-100%);
+        &:hover + .price  i {
+            animation: rotation $menu-selection_speed;
+            animation-iteration-count: 1;
+        }
+
+        &:hover + .price > .one-dish__selected {
             opacity: 1;
         }
 
-
-        &:hover + .one-dish__selected {
-            /*opacity: 0;*/
-            
-
-            & i {
-                transform: rotate(0deg);
-            }
+        &:hover + .price > .menu_price {
+            /*transform: translate(-100%);
+            /*opacity: 1;*/
+            animation: translation $menu-selection_speed both;
+  
         }
+    }
 
+    .price {
+        display: flex;
+        align-items: center;
     }
 
 
+    /*.price {
+        overflow: hidden;
+        white-space: nowrap;
+    }*/
 
     .menu_dish-price {
         position: absolute;
@@ -148,20 +157,23 @@
         justify-content: flex-start;
         z-index: 2;
         width: 4rem;
+        margin: 0;
     }
 
     .menu_price {
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         padding-bottom: 0.5rem;
-        background-color: white;
-        height: 100%;
-        border-radius: 0 15px 15px 0;
+        background-color: white;        
+        height: 50%;
+        margin-bottom: 0.7rem;
+        background-color: transparent;
+        /*border-radius: 0 15px 15px 0;
         flex-direction: row;
         width: 4rem;
-        opacity: 1;
-        transform: translate(0);
-        transition: all 100ms;
+        /*opacity: 1;*/
+        /*transform: translate(0);
+        transition: all $menu-selection_speed;*/
     }
 
     .one-dish__selected {
@@ -177,11 +189,7 @@
         width: 4rem;
         border-radius: 0 15px 15px 0;
         z-index:1;
-        
-        & i {
-            transform: rotate(-360deg);
-            transition: all 500ms;
-        }
+        opacity: 0;
     }    
 
     h3,

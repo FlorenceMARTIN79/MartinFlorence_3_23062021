@@ -15,6 +15,7 @@
 /*color variables*/
 /*font variables*/
 /*media queries maps*/
+/*keyframes variables*/
 * {
   box-sizing: border-box;
 }
@@ -62,6 +63,22 @@ img {
         margin: auto;
     }
 }*/
+@keyframes rotation {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes translation {
+  from {
+    margin-right: 0rem;
+  }
+  to {
+    margin-right: 4rem;
+  }
+}
 /*layout of the buttons*/
 button {
   background: linear-gradient(0.47turn, #FF79DA, 40%, #9356DC);
@@ -186,18 +203,33 @@ button:hover {
     background-color: red;
 
 }*/
+/*label + .one-dish__selected {
+    opacity: 0;
+}*/
 .entree:checked + label, .plat:checked + label, .dessert:checked + label {
   width: 75%;
+  /*& + .menu_price {
+      transform: translate(-100%);
+      opacity: 1;
+  }*/
+  /*&/*:hover*/
+  /*+ .price > .menu_price {
+      transform: translate(-100%);
+      opacity: 1;
+  }*/
+  /*& + .one-dish__selected {
+      transform: rotate(0deg);
+
+  /*& + i {
+      transform: rotate(0deg);*/
+  /*}*/
 }
-.entree:checked + label + .menu_price, .plat:checked + label + .menu_price, .dessert:checked + label + .menu_price {
-  transform: translate(-100%);
-  opacity: 1;
+.entree:checked + label + .price > i, .plat:checked + label + .price > i, .dessert:checked + label + .price > i {
+  animation: rotation 800ms;
+  /*animation-iteration-count: 1;*/
 }
-.entree:checked + label + .one-dish__selected, .plat:checked + label + .one-dish__selected, .dessert:checked + label + .one-dish__selected {
-  /*opacity: 0;*/
-}
-.entree:checked + label + .one-dish__selected i, .plat:checked + label + .one-dish__selected i, .dessert:checked + label + .one-dish__selected i {
-  transform: rotate(0deg);
+.entree:checked + label + .price > .menu_price, .plat:checked + label + .price > .menu_price, .dessert:checked + label + .price > .menu_price {
+  animation: translation 800ms;
 }
 
 header {
@@ -647,6 +679,10 @@ footer span {
   padding-right: 19px;
   background-color: #f6f6f6;
   text-overflow: ellipsis;
+  /*.price {
+      overflow: hidden;
+      white-space: nowrap;
+  }*/
 }
 .main__menu h2 {
   margin-top: 0;
@@ -684,15 +720,21 @@ footer span {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main__menu .menu_dish:hover + .menu_price {
-  transform: translate(-100%);
+.main__menu .menu_dish:hover + .price i {
+  animation: rotation 800ms;
+  animation-iteration-count: 1;
+}
+.main__menu .menu_dish:hover + .price > .one-dish__selected {
   opacity: 1;
 }
-.main__menu .menu_dish:hover + .one-dish__selected {
-  /*opacity: 0;*/
+.main__menu .menu_dish:hover + .price > .menu_price {
+  /*transform: translate(-100%);
+  /*opacity: 1;*/
+  animation: translation 800ms both;
 }
-.main__menu .menu_dish:hover + .one-dish__selected i {
-  transform: rotate(0deg);
+.main__menu .price {
+  display: flex;
+  align-items: center;
 }
 .main__menu .menu_dish-price {
   position: absolute;
@@ -702,19 +744,22 @@ footer span {
   justify-content: flex-start;
   z-index: 2;
   width: 4rem;
+  margin: 0;
 }
 .main__menu .menu_price {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   padding-bottom: 0.5rem;
   background-color: white;
-  height: 100%;
-  border-radius: 0 15px 15px 0;
+  height: 50%;
+  margin-bottom: 0.7rem;
+  background-color: transparent;
+  /*border-radius: 0 15px 15px 0;
   flex-direction: row;
   width: 4rem;
-  opacity: 1;
-  transform: translate(0);
-  transition: all 100ms;
+  /*opacity: 1;*/
+  /*transform: translate(0);
+  transition: all $menu-selection_speed;*/
 }
 .main__menu .one-dish__selected {
   position: absolute;
@@ -729,10 +774,7 @@ footer span {
   width: 4rem;
   border-radius: 0 15px 15px 0;
   z-index: 1;
-}
-.main__menu .one-dish__selected i {
-  transform: rotate(-360deg);
-  transition: all 500ms;
+  opacity: 0;
 }
 .main__menu h3,
 .main__menu p {

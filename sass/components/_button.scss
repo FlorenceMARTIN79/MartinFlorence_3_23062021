@@ -133,22 +133,43 @@ button {
 
 }*/
 
+/*label + .one-dish__selected {
+    opacity: 0;
+}*/
+
 .entree:checked + label, .plat:checked + label, .dessert:checked + label{
     width: 75%;
 
-    & + .menu_price {
+    /*& + .menu_price {
         transform: translate(-100%);
         opacity: 1;
+    }*/
+
+    &/*:hover*/ + .price > i {
+        animation: rotation $menu-selection_speed;
+        /*animation-iteration-count: 1;*/
     }
 
-    & + .one-dish__selected {
-        /*opacity: 0;*/
+    /*&/*:hover*/ /*+ .price > .menu_price {
+        transform: translate(-100%);
+        opacity: 1;
+    }*/
 
-        & i {
-            transform: rotate(0deg);
-        }
+    & + .price > .menu_price {
+        animation: translation $menu-selection_speed;
     }
+
+    /*& + .one-dish__selected {
+        transform: rotate(0deg);
+
+    /*& + i {
+        transform: rotate(0deg);*/
+        
+   /*}*/
+
 }
+
+
 
 
 
