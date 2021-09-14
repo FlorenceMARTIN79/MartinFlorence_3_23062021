@@ -78,9 +78,14 @@ img {
   }
   to {
     margin-right: 4rem;
-    opacity: 1;
+    opacity: 2;
   }
 }
+.menu_dish {
+  width: 1%;
+  z-index: 1;
+}
+
 /*layout of the buttons*/
 button {
   background: linear-gradient(0.47turn, #FF79DA, 40%, #9356DC);
@@ -179,8 +184,9 @@ button:hover {
 /*layout of the button commanding the selection of the meal chosen by the customer*/
 .entree, .plat, .dessert {
   display: none;
+  position: relative;
 }
-.entree + label, .plat + label, .dessert + label {
+.entree + .menu_dish, .plat + .menu_dish, .dessert + .menu_dish {
   width: 100%;
   height: 10vh;
   border-radius: 15px;
@@ -189,25 +195,21 @@ button:hover {
   z-index: 1;
   cursor: pointer;
 }
+.entree + p, .plat + p, .dessert + p {
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  background-color: tomato;
+}
 
 .menu_dish {
   max-width: 100%;
 }
 
-/*input[type="radio"].entree + label {
-    width: 100%;
-    height: 10vh;
-    border-radius: 15px;
-    padding-left: 0.5rem;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    background-color: red;
-
-}*/
-/*label + .one-dish__selected {
-    opacity: 0;
-}*/
 .entree:checked + label, .plat:checked + label, .dessert:checked + label {
   width: 75%;
 }
@@ -324,6 +326,7 @@ footer span {
 /*index header layout*/
 .index-header {
   flex-direction: column;
+  /*label*/
 }
 .index-header .logo {
   width: 100%;
@@ -348,7 +351,7 @@ footer span {
   background-color: #eaeaea;
   height: 8vh;
 }
-.index-header label {
+.index-header .label__i-location {
   display: flex;
   justify-content: center;
 }
@@ -603,11 +606,12 @@ footer span {
 .main_header {
   position: relative;
   z-index: 0;
-  height: 60vh;
+  height: 80vh;
+  overflow: hidden;
 }
 @media screen and (min-width: 416px) {
   .main_header {
-    height: 101vh;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -627,6 +631,11 @@ footer span {
   z-index: 1;
   top: 0;
 }
+@media screen and (min-width: 416px) {
+  .restaurant_photo {
+    height: 70vh;
+  }
+}
 @media screen and (min-width: 1400px) {
   .restaurant_photo {
     height: 100vh;
@@ -634,7 +643,13 @@ footer span {
 }
 .restaurant_photo img {
   width: 100%;
+  /*height: 100%;*/
   object-fit: cover;
+}
+@media screen and (min-width: 416px) {
+  .restaurant_photo img {
+    height: 70vh;
+  }
 }
 
 .restaurant_comment {
@@ -671,6 +686,10 @@ footer span {
   background-color: #f6f6f6;
   text-overflow: ellipsis;
   /*.price {
+      display: flex;
+      align-items: center;
+  }*/
+  /*.price {
       overflow: hidden;
       white-space: nowrap;
   }*/
@@ -705,6 +724,9 @@ footer span {
   height: 100%;
   /*width: 75%;*/
   justify-content: space-evenly;
+  /*width: 75%*/
+  z-index: 2;
+  /*background-color: yellow;*/
 }
 .main__menu .menu_dish h3, .main__menu .menu_dish p {
   white-space: nowrap;
@@ -713,19 +735,19 @@ footer span {
 }
 .main__menu .menu_dish:hover + .price i {
   animation: rotation 800ms;
-  animation-iteration-count: 1;
-}
-.main__menu .menu_dish:hover + .price > .one-dish__selected {
-  opacity: 1;
+  /*animation-iteration-count: 1;*/
+  animation-fill-mode: both;
 }
 .main__menu .menu_dish:hover + .price > .menu_price {
   /*transform: translate(-100%);
   /*opacity: 1;*/
-  animation: translation 800ms both;
+  animation: translation 800ms;
+  animation-fill-mode: both;
+  z-index: 3;
 }
-.main__menu .price {
-  display: flex;
-  align-items: center;
+.main__menu .menu_dish:hover + .price > .one-dish__selected {
+  opacity: 1;
+  z-index: 3;
 }
 .main__menu .menu_dish-price {
   position: absolute;

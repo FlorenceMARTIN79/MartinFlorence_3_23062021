@@ -105,8 +105,9 @@ button {
 /*layout of the button commanding the selection of the meal chosen by the customer*/
 .entree, .plat, .dessert {
     display: none;
+    position: relative;
 
-    & + label {
+    & + .menu_dish {
     width: 100%;
     height: 10vh;
     border-radius: 15px;
@@ -115,27 +116,23 @@ button {
     z-index: 1;
     cursor: pointer;
     }
+
+    & + p {
+        width: 100%;
+        border-radius: 15px;
+        padding-left: 0.5rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+        background-color: tomato;
+    }
 }
 
 .menu_dish {
     max-width: 100%;
 }
 
-/*input[type="radio"].entree + label {
-    width: 100%;
-    height: 10vh;
-    border-radius: 15px;
-    padding-left: 0.5rem;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    background-color: red;
-
-}*/
-
-/*label + .one-dish__selected {
-    opacity: 0;
-}*/
 
 .entree:checked + label, .plat:checked + label, .dessert:checked + label{
     width: 75%;
