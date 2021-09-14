@@ -31,12 +31,6 @@ body {
   font-family: "robotoregular";
 }
 
-#container {
-  /*@include desktop{
-  /*max-width: 1400px;*/
-  /*margin: 10vh;
-  }*/
-}
 @media screen and (min-width: 416px) {
   #container {
     display: flex;
@@ -57,12 +51,6 @@ img {
   font-family: "Shrikhand";
 }
 
-/*main {
-    @include desktop {
-        max-width: 1400px;
-        margin: auto;
-    }
-}*/
 @keyframes rotation {
   from {
     transform: rotate(90deg);
@@ -79,6 +67,14 @@ img {
   to {
     margin-right: 4rem;
     opacity: 2;
+  }
+}
+@keyframes translation_menu-dish {
+  from {
+    margin-right: 4rem;
+  }
+  to {
+    margin-right: 8rem;
   }
 }
 .menu_dish {
@@ -209,9 +205,25 @@ button:hover {
 .menu_dish {
   max-width: 100%;
 }
+.menu_dish .card-title {
+  text-overflow: ellipsis;
+  background-color: green;
+}
+.menu_dish p {
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 0.5rem;
+  /*position: absolute;
+  left: 0;
+  bottom: 0;*/
+  cursor: pointer;
+  background-color: tomato;
+}
 
 .entree:checked + label, .plat:checked + label, .dessert:checked + label {
-  width: 75%;
+  /*width: 75%;*/
+  margin-right: 4rem;
+  overflow: hidden;
 }
 .entree:checked + label + .price > i, .plat:checked + label + .price > i, .dessert:checked + label + .price > i {
   animation: rotation 800ms;
@@ -403,7 +415,7 @@ footer span {
 
 }*/
 @media screen and (min-width: 416px) {
-  main {
+  .index-main {
     width: 90vw;
   }
 }
@@ -606,12 +618,12 @@ footer span {
 .main_header {
   position: relative;
   z-index: 0;
-  height: 80vh;
+  height: 250px;
   overflow: hidden;
 }
 @media screen and (min-width: 416px) {
   .main_header {
-    height: 100vh;
+    height: 60vh;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -620,20 +632,21 @@ footer span {
   }
 }
 
-.restaurant-main {
-  border-radius: 30px 30px 0 0;
-}
-
 .restaurant_photo {
-  height: 100vh;
+  /*height: 100vh;*/
   overflow: hidden;
   position: absolute;
   z-index: 1;
   top: 0;
+  display: flex;
+  height: 200px;
+  padding-bottom: 70px;
 }
 @media screen and (min-width: 416px) {
   .restaurant_photo {
-    height: 70vh;
+    max-width: 100%;
+    height: 60vh;
+    padding-bottom: 10vh;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -642,16 +655,14 @@ footer span {
   }
 }
 .restaurant_photo img {
-  width: 100%;
+  min-width: 100%;
   /*height: 100%;*/
   object-fit: cover;
+  align-self: center;
+  /*@include tablet {
+      height: 70vh;
+  }*/
 }
-@media screen and (min-width: 416px) {
-  .restaurant_photo img {
-    height: 70vh;
-  }
-}
-
 .restaurant_comment {
   display: flex;
   flex-direction: row;
@@ -664,20 +675,23 @@ footer span {
   background-color: #f6f6f6;
   padding-left: 19px;
   padding-right: 19px;
-}
-@media screen and (min-width: 416px) {
-  .restaurant_comment {
-    justify-content: space-around;
-    padding-left: 20vw;
-    padding-right: 20vw;
-    font-size: 1.5rem;
-  }
+  /*@include tablet {
+      justify-content: space-around;
+      padding-left: 20vw;
+      padding-right: 20vw;
+      font-size: 1.5rem;
+  }*/
 }
 .restaurant_comment h1,
 .restaurant_comment i {
   margin-top: 0;
   padding-top: 2rem;
   align-self: baseline;
+}
+
+.restaurant-main {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
 }
 
 .main__menu {
@@ -718,6 +732,12 @@ footer span {
   z-index: 1;
   cursor: pointer;
 }
+.main__menu .entree, .main__menu .plat, .main__menu .dessert {
+  overflow: hidden;
+}
+.main__menu .entree:hover + label, .main__menu .plat:hover + label, .main__menu .dessert:hover + label {
+  overflow: hidden;
+}
 .main__menu .menu_dish {
   display: flex;
   flex-direction: column;
@@ -725,6 +745,8 @@ footer span {
   /*width: 75%;*/
   justify-content: space-evenly;
   /*width: 75%*/
+  max-width: 100%;
+  padding-right: 4rem;
   z-index: 2;
   /*background-color: yellow;*/
 }
@@ -732,6 +754,10 @@ footer span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.main__menu .menu_dish:hover {
+  animation: translation 800ms;
+  animation-fill-mode: both;
 }
 .main__menu .menu_dish:hover + .price i {
   animation: rotation 800ms;

@@ -13,11 +13,11 @@
 .main_header {
     position: relative;
     z-index: 0;
-    height: 80vh;
+    height: 250px;
     overflow: hidden;
 
     @include tablet{
-        height: 100vh;
+        height: 60vh;
     }
     
     @include desktop{
@@ -25,20 +25,22 @@
     }
 }
 
-.restaurant-main {
-    
-    border-radius: 30px 30px 0 0;
-}
 
 .restaurant_photo {
-    height: 100vh;
+    /*height: 100vh;*/
     overflow: hidden;
     position: absolute;
     z-index: 1;
     top: 0;
+    display: flex;
+    height: 200px;
+    padding-bottom: 70px;
+    
 
     @include tablet  {
-        height: 70vh;
+        max-width: 100%;
+        height: 60vh;
+        padding-bottom: 10vh;
     }
 
     @include desktop {
@@ -47,13 +49,18 @@
 
         
     img {
-        width: 100%;
+        min-width: 100%;
         /*height: 100%;*/
         object-fit: cover;  
-
+        align-self: center;
+        
         @include tablet {
-            height: 70vh;
+            
         }
+
+        /*@include tablet {
+            height: 70vh;
+        }*/
     }
 }
 
@@ -70,11 +77,15 @@
 
     @include footer-padding;
 
-    @include tablet {
+    /*@include tablet {
         justify-content: space-around;
         padding-left: 20vw;
         padding-right: 20vw;
         font-size: 1.5rem;
+    }*/
+
+    @include tablet {
+        
     }
 
     h1,
@@ -84,6 +95,12 @@
         align-self: baseline;
     }
 }
+
+.restaurant-main {
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+}
+
 
 .main__menu/*, .menu__plats, .menu__desserts*/ {
     @include footer-padding;
@@ -118,6 +135,14 @@
         cursor: pointer;
     }
 
+    .entree, .plat, .dessert {
+        overflow: hidden;
+    }
+
+    .entree:hover + label, .plat:hover + label, .dessert:hover + label {
+        overflow: hidden;
+    }
+
     .menu_dish {
         display: flex;
         flex-direction: column;
@@ -125,6 +150,8 @@
         /*width: 75%;*/
         justify-content: space-evenly;
         /*width: 75%*/;
+        max-width: 100%;
+        padding-right: 4rem;
             z-index: 2;
             /*background-color: yellow;*/
 
@@ -133,6 +160,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        &:hover {
+            animation: translation/*_menu-dish*/ $menu-selection_speed;
+            animation-fill-mode: both;
+                }
 
         &:hover + .price  i {
             animation: rotation $menu-selection_speed;
