@@ -96,6 +96,10 @@
     }
 }
 
+.font-logo {
+    padding-left: 10px;
+}
+
 .restaurant-main {
     width: 100%;
     border-radius: 30px 30px 0 0;
@@ -110,6 +114,7 @@
     h2 {
         margin-top: 0;
         padding-top: 3rem;
+        @include resto-titles-padding;
     }
 
     .article {
@@ -120,6 +125,7 @@
     .menu__horizontal-line {
         width: 10%;      
         border-bottom: 3px $color-tertiary solid;
+        @include resto-titles-padding;
     }
 
     .menu__one-dish {
@@ -129,14 +135,19 @@
         margin-top: 1rem;
         background-color: white;
         border-radius: 15px;
-        padding-left: 0.5rem;
         position: relative;
         z-index: 1;
         cursor: pointer;
+        border: 3px blue solid;
     }
 
     .entree, .plat, .dessert {
         overflow: hidden;
+        position: relative;
+    }
+
+    .card-comment {
+        max-width: 100%;
     }
 
     .entree:hover + label, .plat:hover + label, .dessert:hover + label {
@@ -144,26 +155,57 @@
     }
 
     .menu_dish {
+        opacity: 0.5;
+        /*background-color: yellowgreen;*/
         display: flex;
         flex-direction: column;
         height: 100%;
+        width: 100%;
+        max-width: 100%;
         /*width: 75%;*/
         justify-content: space-evenly;
         /*width: 75%*/;
         max-width: 100%;
         padding-right: 4rem;
-            z-index: 2;
+        position: absolute;
+        top: 0;
+            z-index: 4;
+
             /*background-color: yellow;*/
 
-        h3, p {
+        + .card-title {
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
+            background-color: grey;
+            border: 3px red solid;
+            z-index: 3;
+            padding-right: 4rem;
+
+            h3, p {
+                max-width: 100%;
+
+                display: flex;
+                flex-wrap: nowrap;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border: 3px green dashed;
+            }
         }
 
-        &:hover {
-            animation: translation/*_menu-dish*/ $menu-selection_speed;
-            animation-fill-mode: both;
+        
+
+        &:hover + .card-title{
+            /*animation: translation_menu-dish $menu-selection_speed;
+            animation-fill-mode: both;*/
+            background-color: tomato;
+            margin-right: 8rem;
                 }
 
         &:hover + .price  i {

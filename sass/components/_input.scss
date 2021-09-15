@@ -1,0 +1,171 @@
+/*layout of the button commanding the selection of the meal chosen by the customer*/
+.menu__one-dish {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border: 3px blue solid;
+}
+
+.entree, .plat, .dessert {
+    overflow: hidden;
+    position: relative;
+    display: none;
+
+    & + .menu_dish {
+    width: 100%;
+    height: 10vh;
+    border-radius: 15px;
+    padding-left: 0.5rem;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    }
+}
+
+.menu_dish {
+    max-width: 100%;
+    opacity: 0.5;
+    /*background-color: yellowgreen;*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    /*width: 75%;*/
+    justify-content: space-evenly;
+    /*width: 75%*/;
+    max-width: 100%;
+    padding-right: 4rem;
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    /*background-color: yellow;*/
+
+    & .card-title {
+        text-overflow: ellipsis;
+        background-color: green;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: grey;
+        border: 3px red solid;
+        z-index: 3;
+        padding-right: 4rem;
+    }
+
+}
+
+.entree:hover + label, .plat:hover + label, .dessert:hover + label {
+    overflow: hidden;
+}
+.menu_dish-price {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 2;
+    width: 4rem;
+    margin: 0;
+}
+
+.menu_price {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 0.5rem;
+    background-color: white;        
+    height: 50%;
+    margin-bottom: 0.7rem;
+    background-color: transparent;
+}
+
+.one-dish__selected {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary;
+    color: white;
+    height: 100%;
+    width: 4rem;
+    border-radius: 0 15px 15px 0;
+    z-index:1;
+    opacity: 0;
+
+    i {
+        font-size: 2rem;
+    }
+}
+
+.menu_dish {
+     h3, p {
+        margin: 0;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: 3px green dashed;
+        }
+    }
+
+    &:hover + .card-title /*when the label is hovered, the layout of the name of the dish is modified*/{
+        background-color: tomato;
+        margin-right: 8rem;
+            }
+
+    &:hover + .price  i /*when the label is hovered, the check icon is animated*/{
+        animation: rotation $menu-selection_speed;
+        animation-fill-mode: both;
+    }
+
+    &:hover + .price > .menu_price /*when the label is hovered, the price is animated*/ {
+        animation: translation $menu-selection_speed ;
+        animation-fill-mode: both;
+        z-index: 3;
+
+    }
+
+    &:hover + .price > .one-dish__selected /*when the label is hovered, the div containing the check icon translates form right to left*/{
+        opacity: 1;
+        z-index: 3;
+    }
+    
+}
+
+
+.entree:checked + label, .plat:checked + label, .dessert:checked + label /*animations when the input is selected thanks to the label area*/
+{
+    /*width: 75%;*/
+    margin-right: 4rem;
+    overflow: hidden;
+    & + .price > i {
+        animation: rotation $menu-selection_speed;
+        
+        animation-fill-mode: both;
+    }
+
+    & + .price > .menu_price {
+        animation: translation $menu-selection_speed;
+        animation-fill-mode: both;
+    }
+
+    & + .price > .one-dish__selected {
+        opacity: 1;
+    }
+
+}

@@ -177,66 +177,6 @@ button:hover {
 
 
 /*}*/
-/*layout of the button commanding the selection of the meal chosen by the customer*/
-.entree, .plat, .dessert {
-  display: none;
-  position: relative;
-}
-.entree + .menu_dish, .plat + .menu_dish, .dessert + .menu_dish {
-  width: 100%;
-  height: 10vh;
-  border-radius: 15px;
-  padding-left: 0.5rem;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-}
-.entree + p, .plat + p, .dessert + p {
-  width: 100%;
-  border-radius: 15px;
-  padding-left: 0.5rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  cursor: pointer;
-  background-color: tomato;
-}
-
-.menu_dish {
-  max-width: 100%;
-}
-.menu_dish .card-title {
-  text-overflow: ellipsis;
-  background-color: green;
-}
-.menu_dish p {
-  width: 100%;
-  border-radius: 15px;
-  padding-left: 0.5rem;
-  /*position: absolute;
-  left: 0;
-  bottom: 0;*/
-  cursor: pointer;
-  background-color: tomato;
-}
-
-.entree:checked + label, .plat:checked + label, .dessert:checked + label {
-  /*width: 75%;*/
-  margin-right: 4rem;
-  overflow: hidden;
-}
-.entree:checked + label + .price > i, .plat:checked + label + .price > i, .dessert:checked + label + .price > i {
-  animation: rotation 800ms;
-  animation-fill-mode: both;
-}
-.entree:checked + label + .price > .menu_price, .plat:checked + label + .price > .menu_price, .dessert:checked + label + .price > .menu_price {
-  animation: translation 800ms;
-  animation-fill-mode: both;
-}
-.entree:checked + label + .price > .one-dish__selected, .plat:checked + label + .price > .one-dish__selected, .dessert:checked + label + .price > .one-dish__selected {
-  opacity: 1;
-}
-
 header {
   display: flex;
   max-width: 100%;
@@ -269,8 +209,8 @@ header a {
 }
 
 footer {
-  padding-left: 19px;
-  padding-right: 19px;
+  padding-left: 22px;
+  padding-right: 22px;
   background-color: #353535;
   color: white;
   display: flex;
@@ -424,8 +364,8 @@ footer span {
 #main-fonctionnement {
   margin-top: 3rem;
   margin-bottom: 3rem;
-  padding-left: 19px;
-  padding-right: 19px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .section__fonctionnement {
@@ -519,8 +459,8 @@ footer span {
   }
 }
 #main__restaurants > * {
-  padding-left: 19px;
-  padding-right: 19px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .section-title {
@@ -673,8 +613,8 @@ footer span {
   width: 100%;
   border-radius: 30px 30px 0 0;
   background-color: #f6f6f6;
-  padding-left: 19px;
-  padding-right: 19px;
+  padding-left: 22px;
+  padding-right: 22px;
   /*@include tablet {
       justify-content: space-around;
       padding-left: 20vw;
@@ -689,14 +629,18 @@ footer span {
   align-self: baseline;
 }
 
+.font-logo {
+  padding-left: 10px;
+}
+
 .restaurant-main {
   width: 100%;
   border-radius: 30px 30px 0 0;
 }
 
 .main__menu {
-  padding-left: 19px;
-  padding-right: 19px;
+  padding-left: 22px;
+  padding-right: 22px;
   background-color: #f6f6f6;
   text-overflow: ellipsis;
   /*.price {
@@ -711,6 +655,7 @@ footer span {
 .main__menu h2 {
   margin-top: 0;
   padding-top: 3rem;
+  margin-left: 8px;
 }
 .main__menu .article {
   display: flex;
@@ -719,6 +664,7 @@ footer span {
 .main__menu .menu__horizontal-line {
   width: 10%;
   border-bottom: 3px #99E2D0 solid;
+  margin-left: 8px;
 }
 .main__menu .menu__one-dish {
   display: flex;
@@ -727,37 +673,67 @@ footer span {
   margin-top: 1rem;
   background-color: white;
   border-radius: 15px;
-  padding-left: 0.5rem;
   position: relative;
   z-index: 1;
   cursor: pointer;
+  border: 3px blue solid;
 }
 .main__menu .entree, .main__menu .plat, .main__menu .dessert {
   overflow: hidden;
+  position: relative;
+}
+.main__menu .card-comment {
+  max-width: 100%;
 }
 .main__menu .entree:hover + label, .main__menu .plat:hover + label, .main__menu .dessert:hover + label {
   overflow: hidden;
 }
 .main__menu .menu_dish {
+  opacity: 0.5;
+  /*background-color: yellowgreen;*/
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+  max-width: 100%;
   /*width: 75%;*/
   justify-content: space-evenly;
   /*width: 75%*/
   max-width: 100%;
   padding-right: 4rem;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  z-index: 4;
   /*background-color: yellow;*/
 }
-.main__menu .menu_dish h3, .main__menu .menu_dish p {
+.main__menu .menu_dish + .card-title {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: grey;
+  border: 3px red solid;
+  z-index: 3;
+  padding-right: 4rem;
+}
+.main__menu .menu_dish + .card-title h3, .main__menu .menu_dish + .card-title p {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border: 3px green dashed;
 }
-.main__menu .menu_dish:hover {
-  animation: translation 800ms;
-  animation-fill-mode: both;
+.main__menu .menu_dish:hover + .card-title {
+  /*animation: translation_menu-dish $menu-selection_speed;
+  animation-fill-mode: both;*/
+  background-color: tomato;
+  margin-right: 8rem;
 }
 .main__menu .menu_dish:hover + .price i {
   animation: rotation 800ms;

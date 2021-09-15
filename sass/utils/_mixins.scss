@@ -1,6 +1,10 @@
 @mixin footer-padding  {
-    padding-left : 19px;
-    padding-right: 19px;
+    padding-left : 22px;
+    padding-right: 22px;
+}
+
+@mixin resto-titles-padding {
+    margin-left: 8px;
 }
 
 @mixin paragraphs-margin {
