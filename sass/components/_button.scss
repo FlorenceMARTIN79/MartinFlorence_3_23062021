@@ -65,42 +65,11 @@ button {
         transform: scale(1.07);
         opacity: 0;
         z-index: 2;
-        transition-property: opacity transform;
+        transition-property: opacity, transform;
         transition-duration: 2000ms;
     }
 }
 
-/*.restaurants__comment-rating {
-   /* padding-right: 1rem;
-    align-self: center;
-    font-size: 1.5rem;*/
-
-/*}
-
-.rating-nolike {
-    position: relative;
-    right: 1rem;
-    top: 1rem;
-   
-    
-
-/*}
-
-/*.rating-nolike:hover {
-    
-    &::after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f004";
-        font-weight: 900; 
-        display: block;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        
-    }
-    
-
-/*}*/
 
 
 
