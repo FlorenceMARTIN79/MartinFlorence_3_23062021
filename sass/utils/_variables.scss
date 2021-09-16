@@ -33,9 +33,10 @@ $font-text: "robotoregular";
 
 /*media queries maps*/
 $breakpoints: (
-    desktop: 1400px,
-    tablet: 416px
-);
+    large: 1400px,
+    desktop: 992px,
+    tablet: 576px
+    );
 
 /*keyframes variables*/
 $menu-selection_speed: 800ms;

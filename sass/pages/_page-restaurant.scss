@@ -27,7 +27,6 @@
 
 
 .restaurant_photo {
-    /*height: 100vh;*/
     overflow: hidden;
     position: absolute;
     z-index: 1;
@@ -36,7 +35,6 @@
     height: 200px;
     padding-bottom: 70px;
     
-
     @include tablet  {
         max-width: 100%;
         height: 60vh;
@@ -46,21 +44,13 @@
     @include desktop {
         height: 100vh;
     }
-
         
     img {
         min-width: 100%;
-        /*height: 100%;*/
         object-fit: cover;  
         align-self: center;
-        
         @include tablet {
-            
         }
-
-        /*@include tablet {
-            height: 70vh;
-        }*/
     }
 }
 
@@ -76,17 +66,6 @@
     background-color: $resto-bg-color;
 
     @include footer-padding;
-
-    /*@include tablet {
-        justify-content: space-around;
-        padding-left: 20vw;
-        padding-right: 20vw;
-        font-size: 1.5rem;
-    }*/
-
-    @include tablet {
-        
-    }
 
     h1,
     i {
@@ -104,7 +83,6 @@
     width: 100%;
     border-radius: 30px 30px 0 0;
 }
-
 
 .main__menu/*, .menu__plats, .menu__desserts*/ {
     @include footer-padding;
@@ -139,6 +117,5 @@
 
     .page-restaurant-main__btn-order {
         width: 12rem;
-
     }
 }

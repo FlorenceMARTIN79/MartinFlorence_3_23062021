@@ -97,54 +97,29 @@
     text-overflow: ellipsis;
     }
 
-/*Animations happening when the label is hovered*/
-.entree:hover + label, .plat:hover + label, .dessert:hover + label {
-    overflow: hidden;
-    margin-right: 4rem;
-    overflow: hidden;
+/*Animations happening when the label is hovered or the input checked*/
+.entree, .plat, .dessert {
+    &:hover + label, &:checked + label {
+        overflow: hidden;
+        margin-right: 4rem;
 
-    ~ .card-title {
-        animation: translation $menu-selection_speed;
-        animation-fill-mode: both;
-            }
+        & ~ .card-title {
+            animation: translation $menu-selection_speed;
+            animation-fill-mode: both;
+        }
 
-    & ~ .price > i {
-        animation: rotation $menu-selection_speed;
-        animation-fill-mode: both;
+        & ~ .price > i {
+            animation: rotation $menu-selection_speed;
+            animation-fill-mode: both;
+        }
+
+        & ~ .price > .menu_price {
+            animation: translation $menu-selection_speed;
+            animation-fill-mode: both;
+        }
+
+        & ~ .price > .one-dish__selected {
+            opacity: 1;
+        }
     }
-
-    & ~ .price > .menu_price {
-        animation: translation $menu-selection_speed;
-        animation-fill-mode: both;
-    }
-
-    & ~ .price > .one-dish__selected {
-        opacity: 1;
-    }
-}
-
-/*Animations happening when the input is checked*/
-.entree:checked + label, .plat:checked + label, .dessert:checked + label {
-    margin-right: 4rem;
-    overflow: hidden;
-
-    ~ .card-title {
-        animation: translation $menu-selection_speed;
-        animation-fill-mode: both;
-            }
-
-    & ~ .price > i {
-        animation: rotation $menu-selection_speed;
-        animation-fill-mode: both;
-    }
-
-    & ~ .price > .menu_price {
-        animation: translation $menu-selection_speed;
-        animation-fill-mode: both;
-    }
-
-    & ~ .price > .one-dish__selected {
-        opacity: 1;
-    }
-
 }
