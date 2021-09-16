@@ -222,33 +222,13 @@ button:hover {
   max-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   white-space: nowrap;
   overflow: hidden;
   border-radius: 15px;
   z-index: 0;
   padding-right: 4rem;
-}
-
-.entree:hover + label, .plat:hover + label, .dessert:hover + label {
-  overflow: hidden;
-  margin-right: 4rem;
-  overflow: hidden;
-}
-.entree:hover + label ~ .card-title, .plat:hover + label ~ .card-title, .dessert:hover + label ~ .card-title {
-  animation: translation 800ms;
-  animation-fill-mode: both;
-}
-.entree:hover + label ~ .price > i, .plat:hover + label ~ .price > i, .dessert:hover + label ~ .price > i {
-  animation: rotation 800ms;
-  animation-fill-mode: both;
-}
-.entree:hover + label ~ .price > .menu_price, .plat:hover + label ~ .price > .menu_price, .dessert:hover + label ~ .price > .menu_price {
-  animation: translation 800ms;
-  animation-fill-mode: both;
-}
-.entree:hover + label ~ .price > .one-dish__selected, .plat:hover + label ~ .price > .one-dish__selected, .dessert:hover + label ~ .price > .one-dish__selected {
-  opacity: 1;
+  padding-left: 0.8rem;
 }
 
 .menu_dish-price {
@@ -259,14 +239,8 @@ button:hover {
   justify-content: flex-start;
   z-index: 2;
   width: 4rem;
-  margin: 0;
-}
-
-.menu_price {
-  display: flex;
   align-items: flex-start;
   padding-bottom: 0.5rem;
-  background-color: white;
   height: 50%;
   margin-bottom: 0.7rem;
   background-color: transparent;
@@ -299,6 +273,29 @@ button:hover {
   text-overflow: ellipsis;
 }
 
+/*Animations happening when the label is hovered*/
+.entree:hover + label, .plat:hover + label, .dessert:hover + label {
+  overflow: hidden;
+  margin-right: 4rem;
+  overflow: hidden;
+}
+.entree:hover + label ~ .card-title, .plat:hover + label ~ .card-title, .dessert:hover + label ~ .card-title {
+  animation: translation 800ms;
+  animation-fill-mode: both;
+}
+.entree:hover + label ~ .price > i, .plat:hover + label ~ .price > i, .dessert:hover + label ~ .price > i {
+  animation: rotation 800ms;
+  animation-fill-mode: both;
+}
+.entree:hover + label ~ .price > .menu_price, .plat:hover + label ~ .price > .menu_price, .dessert:hover + label ~ .price > .menu_price {
+  animation: translation 800ms;
+  animation-fill-mode: both;
+}
+.entree:hover + label ~ .price > .one-dish__selected, .plat:hover + label ~ .price > .one-dish__selected, .dessert:hover + label ~ .price > .one-dish__selected {
+  opacity: 1;
+}
+
+/*Animations happening when the input is checked*/
 .entree:checked + label, .plat:checked + label, .dessert:checked + label {
   margin-right: 4rem;
   overflow: hidden;
