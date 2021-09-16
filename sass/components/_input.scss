@@ -12,12 +12,12 @@
     border: 3px blue solid;
 }
 
-.entree, .plat, .dessert {
+/*input*/.entree, .plat, .dessert {
     overflow: hidden;
     position: relative;
     display: none;
 
-    & + .menu_dish {
+    /*& + .menu_dish {
     width: 100%;
     height: 10vh;
     border-radius: 15px;
@@ -25,13 +25,12 @@
     position: relative;
     z-index: 1;
     cursor: pointer;
-    }
+    }*/
 }
 
-.menu_dish {
+/*label*/.menu_dish {
     max-width: 100%;
     opacity: 0.5;
-    /*background-color: yellowgreen;*/
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -39,35 +38,61 @@
     max-width: 100%;
     /*width: 75%;*/
     justify-content: space-evenly;
-    /*width: 75%*/;
+    border-radius: 15px;
+    cursor: pointer;
     max-width: 100%;
     padding-right: 4rem;
     position: absolute;
     top: 0;
     z-index: 4;
-    /*background-color: yellow;*/
+    
 
-    & .card-title {
+    + /*div containing the text*/.card-title {
         text-overflow: ellipsis;
-        background-color: green;
         width: 100%;
         max-width: 100%;
         max-height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         flex-wrap: nowrap;
         white-space: nowrap;
         overflow: hidden;
-        background-color: grey;
-        border: 3px red solid;
-        z-index: 3;
+        border-radius: 15px;
+        z-index: 0;
         padding-right: 4rem;
     }
-
 }
 
 .entree:hover + label, .plat:hover + label, .dessert:hover + label {
     overflow: hidden;
+
+    /*width: 75%;*/
+    margin-right: 4rem;
+    overflow: hidden;
+
+    ~ .card-title /*when the label is hovered, the layout of the name of the dish is modified*/{
+        animation: translation $menu-selection_speed;
+        animation-fill-mode: both;
+
+        /*margin-right: 8rem;*/
+            }
+
+    & /*+*/~ .price > i {
+        animation: rotation $menu-selection_speed;
+        
+        animation-fill-mode: both;
+    }
+
+    & /*+*/~ .price > .menu_price {
+        animation: translation $menu-selection_speed;
+        animation-fill-mode: both;
+    }
+
+    & /*+*/~ .price > .one-dish__selected {
+        opacity: 1;
+    }
+
 }
 .menu_dish-price {
     position: absolute;
@@ -110,8 +135,7 @@
     }
 }
 
-.menu_dish {
-     h3, p {
+.card-title h3, .card-title p {
         margin: 0;
         max-width: 100%;
         display: flex;
@@ -121,50 +145,55 @@
         text-overflow: ellipsis;
         border: 3px green dashed;
         }
-    }
+    
 
-    &:hover + .card-title /*when the label is hovered, the layout of the name of the dish is modified*/{
-        background-color: tomato;
+.menu-dish:hover ~ .card-title /*when the label is hovered, the layout of the name of the dish is modified*/{
         margin-right: 8rem;
             }
 
-    &:hover + .price  i /*when the label is hovered, the check icon is animated*/{
-        animation: rotation $menu-selection_speed;
-        animation-fill-mode: both;
-    }
+            /*& ~ .price  i /*when the label is hovered, the check icon is animated*//*{*/
+               /* animation: rotation $menu-selection_speed;
+                animation-fill-mode: both;
+            }
+        
+            & ~ .price >/*enfant direct*//* .menu_price /*when the label is hovered, the price is animated*/ /*{*/
+                /*animation: translation $menu-selection_speed ;
+                animation-fill-mode: both;
+                z-index: 3;
+        
+            }
+        
+            & ~ .price > .one-dish__selected /*when the label is hovered, the div containing the check icon translates form right to left*//*{*/
+                /*opacity: 1;
+                z-index: 3;
+            }*/
 
-    &:hover + .price > .menu_price /*when the label is hovered, the price is animated*/ {
-        animation: translation $menu-selection_speed ;
-        animation-fill-mode: both;
-        z-index: 3;
-
-    }
-
-    &:hover + .price > .one-dish__selected /*when the label is hovered, the div containing the check icon translates form right to left*/{
-        opacity: 1;
-        z-index: 3;
-    }
-    
-}
-
-
+      
 .entree:checked + label, .plat:checked + label, .dessert:checked + label /*animations when the input is selected thanks to the label area*/
 {
     /*width: 75%;*/
     margin-right: 4rem;
     overflow: hidden;
-    & + .price > i {
+
+    ~ .card-title /*when the label is hovered, the layout of the name of the dish is modified*/{
+        animation: translation $menu-selection_speed;
+        animation-fill-mode: both;
+
+        /*margin-right: 8rem;*/
+            }
+
+    & /*+*/~ .price > i {
         animation: rotation $menu-selection_speed;
         
         animation-fill-mode: both;
     }
 
-    & + .price > .menu_price {
+    & /*+*/~ .price > .menu_price {
         animation: translation $menu-selection_speed;
         animation-fill-mode: both;
     }
 
-    & + .price > .one-dish__selected {
+    & /*+*/~ .price > .one-dish__selected {
         opacity: 1;
     }
 
