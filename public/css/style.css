@@ -82,7 +82,7 @@ img {
   z-index: 1;
 }
 
-@keyframes menu__entrees-display {
+@keyframes menu-display {
   0% {
     opacity: 0;
   }
@@ -114,6 +114,30 @@ img {
   100% {
     opacity: 1;
     margin-top: 1rem;
+  }
+}
+@keyframes loading-spinner__index-blur {
+  0% {
+    opacity: 0.2;
+  }
+  99% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading-spinner__index-icon {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
   }
 }
 /*layout of the buttons*/
@@ -396,6 +420,27 @@ footer span {
   font-size: 1rem;
 }
 
+body {
+  display: flex;
+}
+
+.container__index {
+  animation: loading-spinner__index-blur 3s;
+}
+
+#spinner {
+  align-self: center;
+  font-size: 5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: sticky;
+  top: 50vh;
+  z-index: 5;
+  animation: loading-spinner__index-icon 3s;
+  opacity: 0;
+}
 /*index header layout*/
 .index-header {
   flex-direction: column;
@@ -780,7 +825,7 @@ footer span {
 }
 
 .menu__plats {
-  animation: menu-display 0 800ms both;
+  /*animation: menu-display 0 800ms both;*/
 }
 .menu__plats .menu__one-dish:nth-of-type(1) {
   animation: resto-page-display 1000ms 1000ms both;
@@ -793,7 +838,7 @@ footer span {
 }
 
 .menu__desserts {
-  animation: menu-display 0 1800ms both;
+  /*animation: menu-display 0 1800ms both;*/
 }
 .menu__desserts .menu__one-dish:nth-of-type(1) {
   animation: resto-page-display 1000ms 2000ms both;

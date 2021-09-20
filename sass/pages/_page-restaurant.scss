@@ -123,7 +123,7 @@
 }
 
 .menu__plats {
-    animation: menu-display 0 800ms both;
+    /*animation: menu-display 0 800ms both;*/
 
     & .menu__one-dish:nth-of-type(1) {
    animation: resto-page-display 1000ms 1000ms both;
@@ -139,7 +139,7 @@
 }
 
 .menu__desserts {
-    animation: menu-display 0 1800ms both;
+    /*animation: menu-display 0 1800ms both;*/
 
     & .menu__one-dish:nth-of-type(1) {
    animation: resto-page-display 1000ms 2000ms both;
