@@ -216,6 +216,7 @@ button:hover {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  overflow: hidden;
 }
 
 /*input*/
@@ -259,6 +260,10 @@ button:hover {
   padding-left: 0.8rem;
 }
 
+.price {
+  width: 8rem;
+}
+
 .menu_dish-price {
   position: absolute;
   right: 0;
@@ -275,10 +280,11 @@ button:hover {
 }
 
 .one-dish__selected {
-  position: absolute;
-  right: 0;
-  top: 0;
   display: flex;
+  position: absolute;
+  overflow: hidden;
+  right: -4rem;
+  top: 0;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
@@ -287,7 +293,6 @@ button:hover {
   width: 4rem;
   border-radius: 0 15px 15px 0;
   z-index: 1;
-  opacity: 0;
 }
 .one-dish__selected i {
   font-size: 2rem;
@@ -310,7 +315,7 @@ button:hover {
   animation: translation 800ms;
   animation-fill-mode: both;
 }
-.entree:hover + label ~ .price > i, .entree:checked + label ~ .price > i, .plat:hover + label ~ .price > i, .plat:checked + label ~ .price > i, .dessert:hover + label ~ .price > i, .dessert:checked + label ~ .price > i {
+.entree:hover + label ~ .price i, .entree:checked + label ~ .price i, .plat:hover + label ~ .price i, .plat:checked + label ~ .price i, .dessert:hover + label ~ .price i, .dessert:checked + label ~ .price i {
   animation: rotation 800ms;
   animation-fill-mode: both;
 }
@@ -320,6 +325,7 @@ button:hover {
 }
 .entree:hover + label ~ .price > .one-dish__selected, .entree:checked + label ~ .price > .one-dish__selected, .plat:hover + label ~ .price > .one-dish__selected, .plat:checked + label ~ .price > .one-dish__selected, .dessert:hover + label ~ .price > .one-dish__selected, .dessert:checked + label ~ .price > .one-dish__selected {
   opacity: 1;
+  animation: translation 800ms forwards;
 }
 
 header {
