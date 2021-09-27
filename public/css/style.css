@@ -43,6 +43,9 @@ body {
 a {
   text-decoration: none;
 }
+a:focus-visible {
+  outline: none;
+}
 
 img {
   max-width: 100%;
@@ -120,9 +123,11 @@ img {
 @keyframes loading-spinner__index-blur {
   0% {
     opacity: 0.2;
+    cursor: wait;
   }
   99% {
     opacity: 0.2;
+    cursor: wait;
   }
   100% {
     opacity: 1;
@@ -140,6 +145,17 @@ img {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes loading-spinner__index-icon-blur {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*layout of the buttons*/
@@ -443,13 +459,15 @@ body {
   position: sticky;
   top: 50vh;
   z-index: 5;
-  opacity: 1;
+  opacity: 0;
+  animation: loading-spinner__index-icon-blur 3s;
 }
 #spinner span {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  text-align: center;
   font-family: "Shrikhand";
   font-size: 3rem;
+  width: 3rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background-clip: text;
   -webkit-background-clip: text;
@@ -463,6 +481,21 @@ body {
 }
 #spinner span:nth-of-type(3) {
   animation: loading-spinner__index-icon 1s 400ms;
+}
+#spinner span:nth-of-type(4) {
+  animation: loading-spinner__index-icon 1s 600ms;
+}
+#spinner span:nth-of-type(5) {
+  animation: loading-spinner__index-icon 1s 800ms;
+}
+#spinner span:nth-of-type(6) {
+  animation: loading-spinner__index-icon 1s 1000ms;
+}
+#spinner span:nth-of-type(7) {
+  animation: loading-spinner__index-icon 1s 1200ms;
+}
+#spinner span:nth-of-type(8) {
+  animation: loading-spinner__index-icon 1s 1400ms;
 }
 
 /*index header layout*/

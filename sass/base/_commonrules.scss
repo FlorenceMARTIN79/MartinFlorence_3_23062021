@@ -29,6 +29,10 @@ body {
 
 a {
     text-decoration: none;
+
+    &:focus-visible  {
+        outline: none;
+    }
 }
 
 img {
@@ -122,10 +126,12 @@ img {
 @keyframes loading-spinner__index-blur {
     0%  {
         opacity: 0.2;
+        cursor: wait;
     }
 
     99%  {
         opacity: 0.2;
+        cursor: wait;
     }
 
     100% {
@@ -136,7 +142,6 @@ img {
 @keyframes loading-spinner__index-icon {
     0% {
         transform: scale(1);
-
     }
 
     25%  {
@@ -149,5 +154,20 @@ img {
         
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes loading-spinner__index-icon-blur {
+    0%  {
+        opacity: 1;
+    }
+
+
+    99%{
+        opacity: 1;
+    }
+
+    100%  {
+        opacity: 0;
     }
 }
