@@ -26,10 +26,20 @@ $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $resto-bg-color:#f6f6f6;
+$shadow-color: hsl(0, 0.65%, 60.78%);
 
 /*font variables*/
 $font-logo: 'Shrikhand';
 $font-text: "robotoregular";
+
+/*animations loops variables*/
+$dishes: entrees, plats, desserts;
+
+$menu-display-delais: (
+    entrees: 0ms,
+    plats: 800ms,
+    desserts: 1600ms
+);
 
 /*media queries maps*/
 $breakpoints: (

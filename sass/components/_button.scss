@@ -11,13 +11,21 @@ button {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 520;
-    box-shadow: 0 5px 20px rgb(155, 154, 154);
+    @include btn-shadow;
     opacity: 1;
+    
 
     &:hover {
         opacity: 0.8;
         transition: opacity 400ms;
+        @if (opacity == 1) {
+            @include btn-shadow;
+        }@else{
+            @include btn-shadow(darken($shadow-color, 100%));
+        }
     }
+
+    
 }
 
 

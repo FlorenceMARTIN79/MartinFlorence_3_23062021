@@ -108,7 +108,47 @@
     
 }
 
- .menu__entrees {
+@each $dish in $dishes {
+    .menu__#{$dish} {
+        animation: menu-display both;
+        animation-duration: 800ms;
+        
+
+        & .menu__one-dish:nth-of-type(1) {
+            /*animation: resto-page-display 1000ms;
+            animation-delay: 0ms;*/
+            }
+        
+        & .menu__one-dish:nth-of-type(1) + .menu__one-dish {
+            /*animation: resto-page-display 1000ms both;
+            animation-delay: 400ms;*/
+            }
+        
+        & .menu__one-dish:nth-of-type(2) + .menu__one-dish {
+            /*animation: resto-page-display 1000ms both;
+            animation-delay: 800ms;*/
+            }
+        }
+}
+
+/*.menu__one-dish:nth-of-type(1) {
+    animation: resto-page-display 1000ms;
+    animation-delay: 0ms;
+}*/
+
+/*.menu__one-dish:nth-of-type(1) + .menu__one-dish {
+    animation: resto-page-display 1000ms both;
+    animation-delay: 400ms;
+    }
+
+.menu__one-dish:nth-of-type(2) + .menu__one-dish {
+    animation: resto-page-display 1000ms both;
+    animation-delay: 800ms;
+    }*/
+
+
+    
+/*.menu__entrees {
      & .menu__one-dish:nth-of-type(1) {
     animation: resto-page-display 1000ms;
     }
@@ -125,7 +165,7 @@
 .menu__plats {
     /*animation: menu-display 0 800ms both;*/
 
-    & .menu__one-dish:nth-of-type(1) {
+    /*& .menu__one-dish:nth-of-type(1) {
    animation: resto-page-display 1000ms 1000ms both;
    }
 
@@ -141,7 +181,7 @@
 .menu__desserts {
     /*animation: menu-display 0 1800ms both;*/
 
-    & .menu__one-dish:nth-of-type(1) {
+    /*& .menu__one-dish:nth-of-type(1) {
    animation: resto-page-display 1000ms 2000ms both;
    }
 
@@ -152,7 +192,7 @@
    & .menu__one-dish:nth-of-type(3){
        animation: resto-page-display 1000ms 2800ms both;
        }
-}
+}*/
 
 .main__order {
     display: flex;
