@@ -16,6 +16,13 @@ body {
     opacity: 0;
     animation: loading-spinner__index-icon-blur 3s;
 
+    & div {
+        display: flex;
+        flex-direction: row;
+        position:fixed;
+        top: 50vh;
+    }
+
     & span {
         display: block;
         text-align:center;

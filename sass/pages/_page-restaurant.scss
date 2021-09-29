@@ -13,7 +13,7 @@
 .main_header {
     position: relative;
     z-index: 0;
-    height: 250px;
+    height: 320px;
     overflow: hidden;
 
     @include tablet{
@@ -28,12 +28,11 @@
 
 .restaurant_photo {
     overflow: hidden;
+    height: 320px;
     position: absolute;
     z-index: 1;
     top: 0;
     display: flex;
-    height: 200px;
-    padding-bottom: 70px;
     
     @include tablet  {
         max-width: 100%;
@@ -45,12 +44,19 @@
         height: 100vh;
     }
         
-    img {
+    .photo--horizontal {
         min-width: 100%;
+        height: 290px;
         object-fit: cover;  
-        align-self: center;
-        @include tablet {
-        }
+        align-self: flex-start;
+    }
+
+    .photo--vertical {
+        /*min-width: 100%;*/
+        object-fit: cover;
+        position: relative;
+        top: 60px;
+        align-self: flex-end;
     }
 }
 
@@ -72,6 +78,7 @@
         margin-top: 0;
         padding-top: 2rem;
         align-self: baseline;
+        font-size: 1.8rem;
     }
 }
 
