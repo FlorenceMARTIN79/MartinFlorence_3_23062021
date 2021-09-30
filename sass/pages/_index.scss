@@ -13,6 +13,9 @@ body {
     position: sticky;
     top: 50vh;
     z-index: 5;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    
     opacity: 0;
     animation: loading-spinner__index-icon-blur 3s;
 
@@ -21,16 +24,18 @@ body {
         flex-direction: row;
         position:fixed;
         top: 50vh;
+        margin-right: 10rem;
+        margin-left: 10rem;
     }
 
     & span {
         display: block;
         text-align:center;
         font-family: $font-logo;
-        font-size: 3rem;
-        width: 3rem;
+        font-size: 2.5rem;
+        width: 2.5rem;
         background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
-       background-clip: text;
+        background-clip: text;
 	    -webkit-background-clip: text;
 	    -webkit-text-fill-color: transparent;
 
@@ -65,6 +70,17 @@ body {
             animation: loading-spinner__index-icon 1s 1400ms;
             }            
         }
+
+    & #hourglass {
+        position: relative;
+        top: 15vh;
+        font-size: 2rem;
+        background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
+        background-clip: text;
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+        animation: loading-spinner__index-hourglass 1200ms 0ms infinite;
+    }
 }
 
 /*index header layout*/

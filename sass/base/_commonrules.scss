@@ -171,3 +171,13 @@ img {
         opacity: 0;
     }
 }
+
+@keyframes loading-spinner__index-hourglass {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}

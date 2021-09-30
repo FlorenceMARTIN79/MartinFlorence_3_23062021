@@ -1,7 +1,7 @@
 .restaurant-header {
     flex-direction: row;
     margin-right: 2rem;
-    
+
     a {
         margin-left: 2rem;
         display: flex;
@@ -16,11 +16,11 @@
     height: 320px;
     overflow: hidden;
 
-    @include tablet{
+    @include tablet {
         height: 60vh;
     }
-    
-    @include desktop{
+
+    @include desktop {
         height: 101vh;
     }
 }
@@ -33,8 +33,8 @@
     z-index: 1;
     top: 0;
     display: flex;
-    
-    @include tablet  {
+
+    @include tablet {
         max-width: 100%;
         height: 60vh;
         padding-bottom: 10vh;
@@ -43,11 +43,11 @@
     @include desktop {
         height: 100vh;
     }
-        
+
     .photo--horizontal {
         min-width: 100%;
         height: 290px;
-        object-fit: cover;  
+        object-fit: cover;
         align-self: flex-start;
     }
 
@@ -66,7 +66,7 @@
     justify-content: space-between;
     position: absolute;
     bottom: 0;
-    z-index:1;
+    z-index: 1;
     width: 100%;
     border-radius: 30px 30px 0 0;
     background-color: $resto-bg-color;
@@ -91,7 +91,10 @@
     border-radius: 30px 30px 0 0;
 }
 
-.main__menu/*, .menu__plats, .menu__desserts*/ {
+.main__menu
+
+/*, .menu__plats, .menu__desserts*/
+    {
     @include footer-padding;
     background-color: $resto-bg-color;
     text-overflow: ellipsis;
@@ -108,98 +111,46 @@
     }
 
     .menu__horizontal-line {
-        width: 10%;      
+        width: 10%;
         border-bottom: 3px $color-tertiary solid;
         @include resto-titles-padding;
     }
-    
+
 }
 
-@each $dish in $dishes {
-    .menu__#{$dish} {
-        animation: menu-display both;
-        animation-duration: 800ms;
-        
-
-        & .menu__one-dish:nth-of-type(1) {
-            /*animation: resto-page-display 1000ms;
-            animation-delay: 0ms;*/
-            }
-        
-        & .menu__one-dish:nth-of-type(1) + .menu__one-dish {
-            /*animation: resto-page-display 1000ms both;
-            animation-delay: 400ms;*/
-            }
-        
-        & .menu__one-dish:nth-of-type(2) + .menu__one-dish {
-            /*animation: resto-page-display 1000ms both;
-            animation-delay: 800ms;*/
-            }
+.menu__entrees {
+    @for $i from 1 through 1000 {
+        .menu__one-dish:nth-of-type(#{$i}) {
+            animation: resto-page-display 1000ms both;
+            animation-delay: $i * 400ms;
         }
-}
-
-/*.menu__one-dish:nth-of-type(1) {
-    animation: resto-page-display 1000ms;
-    animation-delay: 0ms;
-}*/
-
-/*.menu__one-dish:nth-of-type(1) + .menu__one-dish {
-    animation: resto-page-display 1000ms both;
-    animation-delay: 400ms;
     }
-
-.menu__one-dish:nth-of-type(2) + .menu__one-dish {
-    animation: resto-page-display 1000ms both;
-    animation-delay: 800ms;
-    }*/
-
-
-    
-/*.menu__entrees {
-     & .menu__one-dish:nth-of-type(1) {
-    animation: resto-page-display 1000ms;
-    }
-
-    & .menu__one-dish:nth-of-type(2){
-    animation: resto-page-display 1000ms 400ms both;
-    }
-
-    & .menu__one-dish:nth-of-type(3){
-        animation: resto-page-display 1000ms 800ms both;
-        }
 }
 
 .menu__plats {
-    /*animation: menu-display 0 800ms both;*/
+    animation: menu-display both;
+    animation-delay: 1600ms;
 
-    /*& .menu__one-dish:nth-of-type(1) {
-   animation: resto-page-display 1000ms 1000ms both;
-   }
-
-   & .menu__one-dish:nth-of-type(2){
-   animation: resto-page-display 1000ms 1400ms both;
-   }
-
-   & .menu__one-dish:nth-of-type(3){
-       animation: resto-page-display 1000ms 1800ms both;
-       }
+    @for $i from 1 through 1000 {
+        .menu__one-dish:nth-of-type(#{$i}) {
+            animation: resto-page-display 1000ms both;
+            animation-delay: 1200ms + ($i * 400ms);
+        }
+    }
 }
 
 .menu__desserts {
-    /*animation: menu-display 0 1800ms both;*/
+    animation: menu-display both;
+    animation-delay: 2600ms;
 
-    /*& .menu__one-dish:nth-of-type(1) {
-   animation: resto-page-display 1000ms 2000ms both;
-   }
+    @for $i from 1 through 1000 {
+        .menu__one-dish:nth-of-type(#{$i}) {
+            animation: resto-page-display 1000ms both;
+            animation-delay: 2400ms + ($i * 400ms);
+        }
+    }
+}
 
-   & .menu__one-dish:nth-of-type(2){
-   animation: resto-page-display 1000ms 2400ms both;
-   }
-
-   & .menu__one-dish:nth-of-type(3){
-       animation: resto-page-display 1000ms 2800ms both;
-       }
-}*/
 
 .main__order {
     display: flex;
