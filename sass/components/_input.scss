@@ -13,8 +13,13 @@
 
     @include tablet {
         background-color: $resto-bg-color;
+        min-width: 30%;
+        width: 30%;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
         
-        /*@if (.menu__one-dish:last-of-type = .menu__one-dish:nth-of-type(4)){
+        
+       /* @if (.menu__one-dish:last-of-type == .menu__one-dish:nth-of-type(4)){
             width: 20%;
         }
         @else {

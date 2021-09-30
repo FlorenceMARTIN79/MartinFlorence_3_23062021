@@ -250,12 +250,16 @@ button:hover {
 @media screen and (min-width: 576px) {
   .menu__one-dish {
     background-color: #f6f6f6;
-    /*@if (.menu__one-dish:last-of-type = .menu__one-dish:nth-of-type(4)){
-        width: 20%;
-    }
-    @else {
-        width: 30%;
-    }*/
+    min-width: 30%;
+    width: 30%;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    /* @if (.menu__one-dish:last-of-type == .menu__one-dish:nth-of-type(4)){
+         width: 20%;
+     }
+     @else {
+         width: 30%;
+     }*/
   }
 }
 
@@ -902,7 +906,7 @@ main {
 }
 @media screen and (min-width: 992px) {
   .main_header {
-    height: 101vh;
+    height: 50vh;
   }
 }
 
@@ -1008,7 +1012,8 @@ main {
 @media screen and (min-width: 992px) {
   .main__menu .menu__dishes {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 }
 .main__menu .article {

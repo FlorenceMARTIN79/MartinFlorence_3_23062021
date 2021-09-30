@@ -36,7 +36,7 @@ main {
     }
 
     @include desktop {
-        height: 101vh;
+        height: 50vh;
     }
 }
 
@@ -143,7 +143,8 @@ main {
 
         @include desktop {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
+            flex-wrap: wrap;
         }
 
     }
