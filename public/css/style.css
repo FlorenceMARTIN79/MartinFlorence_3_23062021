@@ -68,11 +68,11 @@ img {
 @keyframes translation {
   from {
     margin-right: 0rem;
-    opacity: 0;
+    /*opacity: 0;*/
   }
   to {
     margin-right: 4rem;
-    opacity: 1;
+    /*opacity: 1;*/
   }
 }
 @keyframes translation_menu-dish {
@@ -83,11 +83,10 @@ img {
     margin-right: 8rem;
   }
 }
-.menu_dish {
-  width: 1%;
-  z-index: 1;
-}
-
+/*.menu_dish {
+    width: 1%;
+    z-index: 1;
+}*/
 @keyframes menu-display {
   0% {
     opacity: 0;
@@ -250,6 +249,10 @@ button:hover {
 @media screen and (min-width: 576px) {
   .menu__one-dish {
     background-color: #f6f6f6;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__one-dish {
     min-width: 30%;
     width: 30%;
     margin-right: 0.5rem;
@@ -324,6 +327,7 @@ button:hover {
   width: 4rem;
   align-items: flex-start;
   padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
   height: 50%;
   margin-bottom: 0.7rem;
   background-color: transparent;
@@ -373,7 +377,7 @@ button:hover {
 .dessert:checked + label ~ .card-title {
   white-space: nowrap;
   overflow: hidden;
-  animation: translation 800ms;
+  animation: translation 400ms;
   animation-fill-mode: both;
 }
 .entree:hover + label ~ .card-title h3, .entree:hover + label ~ .card-title p, .entree:checked + label ~ .card-title h3, .entree:checked + label ~ .card-title p,
@@ -394,7 +398,7 @@ button:hover {
 .plat:checked + label ~ .price i,
 .dessert:hover + label ~ .price i,
 .dessert:checked + label ~ .price i {
-  animation: rotation 800ms;
+  animation: rotation 400ms;
   animation-fill-mode: both;
 }
 .entree:hover + label ~ .price > .menu_price, .entree:checked + label ~ .price > .menu_price,
@@ -402,7 +406,7 @@ button:hover {
 .plat:checked + label ~ .price > .menu_price,
 .dessert:hover + label ~ .price > .menu_price,
 .dessert:checked + label ~ .price > .menu_price {
-  animation: translation 800ms;
+  animation: translation 400ms;
   animation-fill-mode: both;
 }
 .entree:hover + label ~ .price > .one-dish__selected, .entree:checked + label ~ .price > .one-dish__selected,
@@ -411,7 +415,7 @@ button:hover {
 .dessert:hover + label ~ .price > .one-dish__selected,
 .dessert:checked + label ~ .price > .one-dish__selected {
   opacity: 1;
-  animation: translation 800ms forwards;
+  animation: translation 400ms forwards;
 }
 
 header {
@@ -889,8 +893,10 @@ body {
 }
 
 /*main layout*/
-main {
-  max-width: 90vw;
+@media screen and (min-width: 576px) {
+  main {
+    max-width: 90vw;
+  }
 }
 
 .main_header {
@@ -1012,7 +1018,7 @@ main {
 @media screen and (min-width: 992px) {
   .main__menu .menu__dishes {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }

@@ -13,6 +13,9 @@
 
     @include tablet {
         background-color: $resto-bg-color;
+    }
+
+    @include desktop {
         min-width: 30%;
         width: 30%;
         margin-right: 0.5rem;
@@ -92,6 +95,7 @@
     width: 4rem;
     align-items: flex-start;
     padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
     height: 50%;
     margin-bottom: 0.7rem;
     background-color: transparent;

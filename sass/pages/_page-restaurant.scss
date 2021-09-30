@@ -22,7 +22,10 @@
 
 /*main layout*/
 main {
+    
+    @include tablet {
     max-width: 90vw;
+}
 }
 
 .main_header {
@@ -143,7 +146,7 @@ main {
 
         @include desktop {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
