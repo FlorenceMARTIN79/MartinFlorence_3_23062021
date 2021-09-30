@@ -1,6 +1,17 @@
+.container__resto {
+    background-color: $resto-bg-color;
+}
+
 .restaurant-header {
     flex-direction: row;
     margin-right: 2rem;
+
+    @include tablet {
+        /*background-color: $resto-bg-color;*/
+        margin: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
 
     a {
         margin-left: 2rem;
@@ -10,6 +21,10 @@
 }
 
 /*main layout*/
+main {
+    max-width: 90vw;
+}
+
 .main_header {
     position: relative;
     z-index: 0;
@@ -33,6 +48,10 @@
     z-index: 1;
     top: 0;
     display: flex;
+
+    @include tablet {
+        border-radius: $radius ;
+    }
 
     .photo--horizontal {
         min-width: 100%;
@@ -59,6 +78,11 @@
             position: relative;
             top: 10px;
         }
+
+        @include tablet {
+            position: relative;
+            top: 250px;
+        }
     }
 }
 
@@ -70,8 +94,12 @@
     bottom: 0;
     z-index: 1;
     width: 100%;
-    border-radius: 30px 30px 0 0;
+    border-radius: $radius;
     background-color: $resto-bg-color;
+
+    @include tablet {
+        background-color: $tablet-main-bg;
+    }
 
     @include footer-padding;
 
@@ -101,10 +129,23 @@
     background-color: $resto-bg-color;
     text-overflow: ellipsis;
 
+    @include tablet {
+        background-color: $tablet-main-bg;
+    }
+
     h2 {
         margin-top: 0;
         padding-top: 3rem;
         @include resto-titles-padding;
+    }
+
+    .menu__dishes {
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+
     }
 
     .article {
@@ -160,6 +201,10 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: $resto-bg-color;
+
+    @include tablet {
+        background-color: $tablet-main-bg;
+    }
 
     .page-restaurant-main__btn-order {
         width: 12rem;

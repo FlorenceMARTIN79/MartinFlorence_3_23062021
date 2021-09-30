@@ -10,6 +10,17 @@
     z-index: 1;
     cursor: pointer;
     overflow: hidden;
+
+    @include tablet {
+        background-color: $resto-bg-color;
+        
+        /*@if (.menu__one-dish:last-of-type = .menu__one-dish:nth-of-type(4)){
+            width: 20%;
+        }
+        @else {
+            width: 30%;
+        }*/
+    }
 }
 
 /*input*/
