@@ -39,41 +39,17 @@ body {
 	    -webkit-background-clip: text;
 	    -webkit-text-fill-color: transparent;
 
-        &:nth-of-type(1) {
+
+        @for $i from 0 through 8 {
+        &:nth-of-type(#{$i}) {
             animation: loading-spinner__index-icon 1s;
+            animation-delay: ($i - 1) * 200ms;
             }
-
-        &:nth-of-type(2) {
-            animation: loading-spinner__index-icon 1s 200ms;
-            }  
-            
-        &:nth-of-type(3) {
-            animation: loading-spinner__index-icon 1s 400ms;
-            }      
-            
-        &:nth-of-type(4) {
-            animation: loading-spinner__index-icon 1s 600ms;
-            }
-    
-        &:nth-of-type(5) {
-            animation: loading-spinner__index-icon 1s 800ms;
-            }  
-                
-        &:nth-of-type(6) {
-            animation: loading-spinner__index-icon 1s 1000ms;
-            }
-        &:nth-of-type(7) {
-            animation: loading-spinner__index-icon 1s 1200ms;
-            }  
-                    
-        &:nth-of-type(8) {
-            animation: loading-spinner__index-icon 1s 1400ms;
-            }            
         }
-
+    }
+  
     & #hourglass {
-        position: relative;
-        top: 15vh;
+        top: 65vh;
         font-size: 2rem;
         background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
         background-clip: text;
@@ -174,7 +150,7 @@ body {
 
 .index-main {
     @include tablet {
-        width: 90vw;
+        width: 80vw;
     }
 
     

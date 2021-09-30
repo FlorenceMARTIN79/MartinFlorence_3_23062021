@@ -17,6 +17,12 @@
     margin-bottom: 0.5rem;
 }
 
+@mixin bigmobile {
+    @media screen and (min-width: map-get($breakpoints, bigmobile)){
+        @content;
+    }
+}
+
 @mixin tablet {
     @media screen and (min-width: map-get($breakpoints, tablet)){
         @content;
