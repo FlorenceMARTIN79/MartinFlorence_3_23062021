@@ -1,20 +1,7 @@
-@mixin footer-padding  {
-    padding-left : 22px;
-    padding-right: 22px;
-}
-
-@mixin resto-titles-padding {
-    margin-left: 8px;
-}
-
-@mixin paragraphs-margin {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-@mixin block-margin{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+@mixin under279px {
+    @media screen and (max-width: map-get($breakpoints, under279px)){
+        @content;
+    }
 }
 
 @mixin bigmobile {
@@ -34,6 +21,32 @@
         @content;
     }
 }
+
+@mixin footer-padding  {
+    padding-left : 22px;
+    padding-right: 22px;
+
+    @include under279px {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@mixin resto-titles-padding {
+    margin-left: 8px;
+}
+
+@mixin paragraphs-margin {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@mixin block-margin{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
 
 @mixin btn-shadow($color: $shadow-color){
     box-shadow: 0 5px 20px $color;

@@ -17,6 +17,10 @@ header {
     img {
         object-fit: contain;
         width: 50%;
+
+        @include under279px {
+            width: 70%;
+        }
     }
 
     a {

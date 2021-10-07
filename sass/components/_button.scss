@@ -25,6 +25,10 @@ button {
         }
     }
 
+    @include under279px {
+        width: 80%;
+    }
+
     
 }
 
@@ -42,6 +46,11 @@ button {
         padding-right: 1rem;
         align-self: center;
         font-size: 1.5rem;
+
+        @include under279px {
+            font-size: 0.8rem;
+            padding-right: 0.4rem;
+        }
     }
 }
 
