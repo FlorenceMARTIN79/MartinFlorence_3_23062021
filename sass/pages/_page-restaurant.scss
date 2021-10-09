@@ -34,6 +34,10 @@ main {
     height: 320px;
     overflow: hidden;
 
+    @include under279px {
+        height: 205px;
+    }
+
     @include tablet {
         height: 60vh;
     }
@@ -52,6 +56,10 @@ main {
     top: 0;
     display: flex;
 
+    @include under279px {
+        height: 200px;
+    }
+
     @include tablet {
         border-radius: $radius ;
     }
@@ -61,6 +69,12 @@ main {
         height: 290px;
         object-fit: cover;
         align-self: flex-start;
+
+        @include under279px {
+            height: 250px;
+            align-self: center;
+            padding-bottom: 3rem;
+        }
 
         @include bigmobile {
             height: auto;
@@ -112,6 +126,13 @@ main {
         padding-top: 2rem;
         align-self: baseline;
         font-size: 1.8rem;
+        font-weight: 350;
+
+        @include under279px {
+            font-size: 1.15rem;
+            padding-top: 1.8rem;
+            padding-right: 1.6rem;
+        }
     }
 }
 
@@ -140,6 +161,12 @@ main {
         margin-top: 0;
         padding-top: 3rem;
         @include resto-titles-padding;
+
+        @include under279px {
+            padding-top: 1rem;
+            margin-bottom: 0.5em;
+            font-size: 0.8rem;
+        }
     }
 
     .menu__dishes {
@@ -161,6 +188,10 @@ main {
         width: 10%;
         border-bottom: 3px $color-tertiary solid;
         @include resto-titles-padding;
+
+        @include under279px {
+            width: 15%;
+        }
     }
 
 }
@@ -212,5 +243,9 @@ main {
 
     .page-restaurant-main__btn-order {
         width: 12rem;
+
+        @include under279px {
+            width: 10rem;
+        }
     }
 }

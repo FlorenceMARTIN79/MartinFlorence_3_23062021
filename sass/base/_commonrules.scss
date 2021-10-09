@@ -55,17 +55,19 @@ img {
 @keyframes translation  {
     from {
         margin-right: 0rem;
-        /*opacity: 0;*/
     }
+        /*opacity: 0;*/
+    
 
     to {
         margin-right: 4rem;
-        /*opacity: 1;*/
     }
+        /*opacity: 1;*/
+    
 
 }
 
-@keyframes translation_menu-dish {
+/*@keyframes translation_menu-dish {
     from {
         margin-right: 4rem;
     }
@@ -73,7 +75,7 @@ img {
     to {
         margin-right: 8rem;
     }
-}
+}*/
 
 /*.menu_dish {
     width: 1%;

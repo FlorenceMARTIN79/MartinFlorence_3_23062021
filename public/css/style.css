@@ -68,21 +68,22 @@ img {
 @keyframes translation {
   from {
     margin-right: 0rem;
-    /*opacity: 0;*/
   }
+  /*opacity: 0;*/
   to {
     margin-right: 4rem;
-    /*opacity: 1;*/
   }
+  /*opacity: 1;*/
 }
-@keyframes translation_menu-dish {
-  from {
-    margin-right: 4rem;
-  }
-  to {
-    margin-right: 8rem;
-  }
-}
+/*@keyframes translation_menu-dish {
+    from {
+        margin-right: 4rem;
+    }
+
+    to {
+        margin-right: 8rem;
+    }
+}*/
 /*.menu_dish {
     width: 1%;
     z-index: 1;
@@ -305,6 +306,11 @@ button:hover {
   z-index: 4;
   /*div containing the text*/
 }
+@media screen and (max-width: 278px) {
+  .menu_dish {
+    padding-right: 3rem;
+  }
+}
 .menu_dish + .card-title {
   text-overflow: ellipsis;
   width: 100%;
@@ -320,28 +326,43 @@ button:hover {
 .menu_dish + .card-title h3 {
   font-size: 0.95rem;
 }
+@media screen and (max-width: 278px) {
+  .menu_dish + .card-title h3 {
+    font-size: 0.8rem;
+  }
+}
 .menu_dish + .card-title p {
   font-size: 0.8rem;
+}
+@media screen and (max-width: 278px) {
+  .menu_dish + .card-title p {
+    font-size: 0.63rem;
+  }
 }
 
 .price {
   width: 8rem;
 }
-
 .menu_dish-price {
   position: absolute;
   right: 0;
   bottom: 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   z-index: 2;
   width: 4rem;
-  align-items: flex-start;
-  padding-bottom: 0.5rem;
+  align-items: flex-end;
+  /*padding-bottom: 0.5rem;*/
   padding-left: 0.5rem;
   height: 50%;
   margin-bottom: 0.7rem;
   background-color: transparent;
+}
+@media screen and (max-width: 278px) {
+  .menu_dish-price {
+    font-size: 0.8rem;
+    width: 3rem;
+  }
 }
 
 .one-dish__selected {
@@ -359,8 +380,18 @@ button:hover {
   border-radius: 0 15px 15px 0;
   z-index: 1;
 }
+@media screen and (max-width: 278px) {
+  .one-dish__selected {
+    width: 3rem;
+  }
+}
 .one-dish__selected i {
   font-size: 2rem;
+}
+@media screen and (max-width: 278px) {
+  .one-dish__selected i {
+    font-size: 1.3rem;
+  }
 }
 
 .card-title h3,
@@ -380,6 +411,15 @@ button:hover {
 .dessert:checked + label {
   overflow: hidden;
   margin-right: 4rem;
+}
+@media screen and (max-width: 278px) {
+  .entree:hover + label, .entree:checked + label,
+.plat:hover + label,
+.plat:checked + label,
+.dessert:hover + label,
+.dessert:checked + label {
+    margin-right: 3rem;
+  }
 }
 .entree:hover + label ~ .card-title, .entree:checked + label ~ .card-title,
 .plat:hover + label ~ .card-title,
@@ -481,6 +521,11 @@ footer {
     padding-right: 10px;
   }
 }
+@media screen and (max-width: 278px) {
+  footer {
+    padding-bottom: 1.5rem;
+  }
+}
 @media screen and (min-width: 576px) {
   footer {
     min-width: 100%;
@@ -500,6 +545,12 @@ footer a {
   color: white;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 278px) {
+  footer a {
+    margin-top: 1vh;
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 576px) {
   footer a {
@@ -526,7 +577,15 @@ footer i {
 }
 footer h2 {
   font-size: 1.2rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+@media screen and (max-width: 278px) {
+  footer h2 {
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
 }
 @media screen and (min-width: 576px) {
   footer h2 {
@@ -1032,6 +1091,11 @@ body {
   height: 320px;
   overflow: hidden;
 }
+@media screen and (max-width: 278px) {
+  .main_header {
+    height: 205px;
+  }
+}
 @media screen and (min-width: 576px) {
   .main_header {
     height: 60vh;
@@ -1051,6 +1115,11 @@ body {
   top: 0;
   display: flex;
 }
+@media screen and (max-width: 278px) {
+  .restaurant_photo {
+    height: 200px;
+  }
+}
 @media screen and (min-width: 576px) {
   .restaurant_photo {
     border-radius: 30px 30px 0 0;
@@ -1061,6 +1130,13 @@ body {
   height: 290px;
   object-fit: cover;
   align-self: flex-start;
+}
+@media screen and (max-width: 278px) {
+  .restaurant_photo .photo--horizontal {
+    height: 250px;
+    align-self: center;
+    padding-bottom: 3rem;
+  }
 }
 @media screen and (min-width: 430px) {
   .restaurant_photo .photo--horizontal {
@@ -1120,6 +1196,15 @@ body {
   padding-top: 2rem;
   align-self: baseline;
   font-size: 1.8rem;
+  font-weight: 350;
+}
+@media screen and (max-width: 278px) {
+  .restaurant_comment h1,
+.restaurant_comment i {
+    font-size: 1.15rem;
+    padding-top: 1.8rem;
+    padding-right: 1.6rem;
+  }
 }
 
 .font-logo {
@@ -1154,6 +1239,13 @@ body {
   padding-top: 3rem;
   margin-left: 8px;
 }
+@media screen and (max-width: 278px) {
+  .main__menu h2 {
+    padding-top: 1rem;
+    margin-bottom: 0.5em;
+    font-size: 0.8rem;
+  }
+}
 @media screen and (min-width: 992px) {
   .main__menu .menu__dishes {
     display: flex;
@@ -1169,6 +1261,11 @@ body {
   width: 10%;
   border-bottom: 3px #99E2D0 solid;
   margin-left: 8px;
+}
+@media screen and (max-width: 278px) {
+  .main__menu .menu__horizontal-line {
+    width: 15%;
+  }
 }
 
 .menu__entrees .menu__one-dish:nth-of-type(1) {
@@ -13196,6 +13293,11 @@ body {
 }
 .main__order .page-restaurant-main__btn-order {
   width: 12rem;
+}
+@media screen and (max-width: 278px) {
+  .main__order .page-restaurant-main__btn-order {
+    width: 10rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
