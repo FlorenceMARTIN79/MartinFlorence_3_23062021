@@ -19,7 +19,7 @@ header {
         width: 50%;
 
         @include under279px {
-            width: 70%;
+            width: 60%;
         }
     }
 
@@ -32,5 +32,10 @@ header {
     object-fit: contain;
     @include block-margin;
     height: 8vh;
+
+    @include under279px {
+        height: 6vh;
+        margin-bottom: 0;
+    }
 }
 

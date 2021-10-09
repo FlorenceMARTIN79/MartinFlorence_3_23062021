@@ -17,6 +17,10 @@
         margin-left: 2rem;
         display: flex;
         align-items: center;
+
+        @include under279px {
+            margin-left: 1rem;
+        }
     }
 }
 
@@ -35,7 +39,7 @@ main {
     overflow: hidden;
 
     @include under279px {
-        height: 205px;
+        height: 240px;
     }
 
     @include tablet {
@@ -57,7 +61,7 @@ main {
     display: flex;
 
     @include under279px {
-        height: 200px;
+        height: 255px;
     }
 
     @include tablet {
@@ -89,6 +93,11 @@ main {
         position: relative;
         top: 60px;
         align-self: flex-end;
+
+        @include under279px {
+            top: 0;
+            align-self: center;
+        }
 
         @include bigmobile {
             height: auto;
