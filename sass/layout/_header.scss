@@ -21,6 +21,10 @@ header {
         @include under279px {
             width: 60%;
         }
+
+        @include large {
+            width: 20%;
+        }
     }
 
     a {

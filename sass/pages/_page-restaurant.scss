@@ -25,6 +25,11 @@
         @include tablet {
             margin-left: 4rem;
         }
+
+        @include large {
+            margin-left: 7rem;
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -53,6 +58,10 @@ main {
     @include desktop {
         height: 40vh;
     }
+
+    @include large {
+        height: 40vh;
+    }
 }
 
 
@@ -70,6 +79,10 @@ main {
 
     @include tablet {
         border-radius: $radius;
+    }
+
+    @include large {
+        height: 40vh;
     }
 
     .photo--horizontal {
@@ -122,6 +135,7 @@ main {
         @include desktop {
             top: -60px;
         }
+
     }
 }
 
@@ -154,6 +168,11 @@ main {
             font-size: 1.15rem;
             padding-top: 1.8rem;
             padding-right: 1.6rem;
+        }
+
+        @include large {
+            padding-left: 3rem;
+            padding-right: 3rem;
         }
     }
 }

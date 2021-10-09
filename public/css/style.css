@@ -343,6 +343,7 @@ button:hover {
 .price {
   width: 8rem;
 }
+
 .menu_dish-price {
   position: absolute;
   right: 0;
@@ -362,6 +363,12 @@ button:hover {
   .menu_dish-price {
     font-size: 0.8rem;
     width: 3rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .menu_dish-price {
+    padding-left: 0;
+    padding-bottom: 1rem;
   }
 }
 
@@ -492,6 +499,11 @@ header img {
 @media screen and (max-width: 278px) {
   header img {
     width: 60%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header img {
+    width: 20%;
   }
 }
 header a {
@@ -1093,6 +1105,12 @@ body {
     margin-left: 4rem;
   }
 }
+@media screen and (min-width: 1400px) {
+  .restaurant-header a {
+    margin-left: 7rem;
+    font-size: 1.5rem;
+  }
+}
 
 /*main layout*/
 @media screen and (min-width: 576px) {
@@ -1122,6 +1140,11 @@ body {
     height: 40vh;
   }
 }
+@media screen and (min-width: 1400px) {
+  .main_header {
+    height: 40vh;
+  }
+}
 
 .restaurant_photo {
   overflow: hidden;
@@ -1139,6 +1162,11 @@ body {
 @media screen and (min-width: 576px) {
   .restaurant_photo {
     border-radius: 30px 30px 0 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .restaurant_photo {
+    height: 40vh;
   }
 }
 .restaurant_photo .photo--horizontal {
@@ -1236,6 +1264,13 @@ body {
     font-size: 1.15rem;
     padding-top: 1.8rem;
     padding-right: 1.6rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .restaurant_comment h1,
+.restaurant_comment i {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 

@@ -96,9 +96,6 @@
 
 .price {
     width: 8rem;
-
-    @include under279px {
-    }
 }
 
 .menu_dish-price {
@@ -119,6 +116,11 @@
     @include under279px {
         font-size: 0.8rem;
         width: 3rem;
+    }
+
+    @include large {
+        padding-left: 0;
+        padding-bottom: 1rem;
     }
 }
 
