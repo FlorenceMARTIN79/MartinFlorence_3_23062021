@@ -51,7 +51,7 @@ main {
     }
 
     @include desktop {
-        height: 50vh;
+        height: 40vh;
     }
 }
 
@@ -93,6 +93,7 @@ main {
         @include tablet {
             align-self: center;
         }
+
     }
 
     .photo--vertical {
@@ -116,6 +117,10 @@ main {
 
         @include tablet {
             position: relative;
+        }
+
+        @include desktop {
+            top: -60px;
         }
     }
 }

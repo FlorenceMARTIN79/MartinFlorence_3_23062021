@@ -1119,7 +1119,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .main_header {
-    height: 50vh;
+    height: 40vh;
   }
 }
 
@@ -1190,6 +1190,11 @@ body {
 @media screen and (min-width: 576px) {
   .restaurant_photo .photo--vertical {
     position: relative;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant_photo .photo--vertical {
+    top: -60px;
   }
 }
 
