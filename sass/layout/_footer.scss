@@ -54,7 +54,7 @@ footer {
         width: 1.5rem;
         text-align: center;
 
-        @include desktop {
+        @include tablet {
             width: 15%;
         }
     }

@@ -576,7 +576,7 @@ footer i {
   width: 1.5rem;
   text-align: center;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 576px) {
   footer i {
     width: 15%;
   }
@@ -1088,6 +1088,11 @@ body {
     margin-left: 1rem;
   }
 }
+@media screen and (min-width: 576px) {
+  .restaurant-header a {
+    margin-left: 4rem;
+  }
+}
 
 /*main layout*/
 @media screen and (min-width: 576px) {
@@ -1109,7 +1114,7 @@ body {
 }
 @media screen and (min-width: 576px) {
   .main_header {
-    height: 60vh;
+    height: 50vh;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1156,6 +1161,11 @@ body {
     top: -30px;
   }
 }
+@media screen and (min-width: 576px) {
+  .restaurant_photo .photo--horizontal {
+    align-self: center;
+  }
+}
 .restaurant_photo .photo--vertical {
   /*min-width: 100%;*/
   object-fit: cover;
@@ -1180,7 +1190,6 @@ body {
 @media screen and (min-width: 576px) {
   .restaurant_photo .photo--vertical {
     position: relative;
-    top: 250px;
   }
 }
 

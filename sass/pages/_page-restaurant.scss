@@ -21,6 +21,10 @@
         @include under279px {
             margin-left: 1rem;
         }
+
+        @include tablet {
+            margin-left: 4rem;
+        }
     }
 }
 
@@ -43,7 +47,7 @@ main {
     }
 
     @include tablet {
-        height: 60vh;
+        height: 50vh;
     }
 
     @include desktop {
@@ -65,7 +69,7 @@ main {
     }
 
     @include tablet {
-        border-radius: $radius ;
+        border-radius: $radius;
     }
 
     .photo--horizontal {
@@ -84,6 +88,10 @@ main {
             height: auto;
             position: relative;
             top: -30px;
+        }
+
+        @include tablet {
+            align-self: center;
         }
     }
 
@@ -108,7 +116,6 @@ main {
 
         @include tablet {
             position: relative;
-            top: 250px;
         }
     }
 }
