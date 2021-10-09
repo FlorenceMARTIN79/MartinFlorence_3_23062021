@@ -1173,7 +1173,8 @@ body {
   .restaurant_photo .photo--vertical {
     height: auto;
     position: relative;
-    top: 10px;
+    align-self: center;
+    top: -20px;
   }
 }
 @media screen and (min-width: 576px) {
