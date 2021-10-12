@@ -853,6 +853,7 @@ body {
 
 .fonctionnement-detail {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   background-color: #f6f6f6;
