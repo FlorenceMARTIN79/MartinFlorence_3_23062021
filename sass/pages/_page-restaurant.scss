@@ -3,7 +3,6 @@
 }
 
 .restaurant-header {
-    flex-direction: row;
     margin-right: 2rem;
 
     @include tablet {
@@ -139,7 +138,6 @@ main {
 
 .restaurant_comment {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     position: absolute;
     bottom: 0;
