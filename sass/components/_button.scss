@@ -1,6 +1,6 @@
 /*layout of the buttons*/
 button {
-    background: linear-gradient(/*to top, $color-primary, $color-secondary/*180deg, $color-secondary, $color-primary 60%*/.47turn, $color-secondary, 40%, $color-primary);
+    background: linear-gradient(.47turn, $color-secondary, 40%, $color-primary);
     border: none;
     color: white;
     border-radius: 25px;
@@ -13,14 +13,16 @@ button {
     font-weight: 520;
     @include btn-shadow;
     opacity: 1;
-    
 
     &:hover {
         opacity: 0.8;
         transition: opacity 400ms;
-        @if (opacity == 1) {
+
+        @if (opacity==1) {
             @include btn-shadow;
-        }@else{
+        }
+
+        @else {
             @include btn-shadow(darken($shadow-color, 100%));
         }
     }
@@ -28,10 +30,7 @@ button {
     @include under279px {
         width: 80%;
     }
-
-    
 }
-
 
 /*layout of the hearts for the rating*/
 .restaurants__comment {
@@ -40,7 +39,6 @@ button {
     justify-content: space-between;
     align-items: center;
     height: 25%;
-
 
     &-rating {
         padding-right: 1rem;
@@ -59,6 +57,7 @@ button {
     transform: scale(1);
     z-index: 0;
     position: relative;
+
     &:hover {
         &::after {
             opacity: 1;
@@ -68,17 +67,17 @@ button {
     &::after {
         font-family: "Font Awesome 5 Free";
         content: "\f004";
-        font-weight: 900; 
+        font-weight: 900;
         display: block;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-       background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
-       background-clip: text;
-	    -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent;
+        background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         transform: scale(1.07);
         opacity: 0;
         z-index: 2;
@@ -86,11 +85,3 @@ button {
         transition-duration: 2000ms;
     }
 }
-
-
-
-
-
-
-
-

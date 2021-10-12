@@ -3,7 +3,7 @@ body {
 }
 
 .container__index {
-    animation: loading-spinner__index-blur 3s ;
+    animation: loading-spinner__index-blur 3s;
 }
 
 #spinner {
@@ -15,7 +15,6 @@ body {
     z-index: 5;
     margin-right: 8rem;
     margin-left: 8rem;
-    
     opacity: 0;
     animation: loading-spinner__index-icon-blur 3s;
 
@@ -27,7 +26,7 @@ body {
     & div {
         display: flex;
         flex-direction: row;
-        position:fixed;
+        position: fixed;
         top: 50vh;
         margin-right: 10rem;
         margin-left: 10rem;
@@ -35,26 +34,23 @@ body {
         @include under279px {
             top: 30vh;
         }
-
-        
     }
 
     & span {
         display: block;
-        text-align:center;
+        text-align: center;
         font-family: $font-logo;
         font-size: 2rem;
         width: 2rem;
         background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
         background-clip: text;
-	    -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent;
-
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         @for $i from 0 through 8 {
-        &:nth-of-type(#{$i}) {
-            animation: loading-spinner__index-icon 1s;
-            animation-delay: ($i - 1) * 200ms;
+            &:nth-of-type(#{$i}) {
+                animation: loading-spinner__index-icon 1s;
+                animation-delay: ($i - 1) * 200ms;
             }
         }
 
@@ -63,20 +59,19 @@ body {
             width: 1rem;
         }
     }
-  
+
     & #hourglass {
         top: 65vh;
         font-size: 2rem;
         background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
         background-clip: text;
-	    -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         animation: loading-spinner__index-hourglass 1200ms 0ms infinite;
-    
+
         @include under279px {
             top: 40vh;
         }
-
     }
 }
 
@@ -88,7 +83,6 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
-
     }
 
     img {
@@ -112,7 +106,8 @@ body {
         height: 8vh;
     }
 
-    /*label*/.label__i-location {
+    /*label*/
+    .label__i-location {
         display: flex;
         justify-content: center;
     }
@@ -127,7 +122,7 @@ body {
             font-size: 0.7rem;
         }
 
-        @include tablet  {
+        @include tablet {
             width: 40%;
         }
 
@@ -144,7 +139,6 @@ body {
         color: black;
         text-align: center;
     }
-
 }
 
 .header-home-title {
@@ -181,24 +175,15 @@ body {
             padding-right: 2rem;
         }
     }
-
 }
 
 /*index main layout*/
-
-/*.index-main {
-    @include footer-padding;
-
-}*/
 
 .index-main {
     @include tablet {
         width: 80vw;
     }
-
-    
 }
-
 
 /*fonctionnement section layout*/
 #main-fonctionnement {
@@ -219,15 +204,12 @@ body {
     height: 40vh;
 
     @include tablet {
-        /*flex-direction: row;*/
-        /*height: auto;
-        width: 100%;*/
         justify-content: space-between;
     }
 
-    @include desktop  {
+    @include desktop {
         flex-direction: row;
-        height: auto; 
+        height: auto;
         width: 100%;
     }
 }
@@ -245,7 +227,6 @@ body {
     padding-left: 2rem;
 
     @include tablet {
-        /*width: 30%;*/
         padding-right: 1rem;
     }
 
@@ -278,7 +259,6 @@ body {
         @include under279px {
             left: -0.5rem;
         }
-
     }
 
     p {
@@ -290,7 +270,6 @@ body {
             line-height: 1.5;
         }
     }
-
 }
 
 .fonctionnement-detail:hover {
@@ -307,12 +286,11 @@ body {
     background-color: $resto-bg-color;
     padding-right: 0;
     padding-bottom: 3rem;
-      
+
     @include under279px {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-
 
     @include tablet {
         border-radius: 15px;
@@ -342,7 +320,6 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
 }
 
 .restaurants__card {
@@ -351,10 +328,6 @@ body {
     margin-bottom: 1rem;
     border-radius: 17px;
     cursor: pointer;
-
-    /*@include tablet {
-        max-width: 48%;
-    }*/
 
     @include desktop {
         width: 23%;
@@ -371,7 +344,7 @@ body {
         @include under279px {
             font-size: 0.8rem;
         }
-        
+
     }
 
     .restaurants__card-photo {
@@ -383,7 +356,7 @@ body {
         position: relative;
 
         @include desktop {
-        max-height: 20vh;
+            max-height: 20vh;
         }
     }
 
@@ -391,10 +364,6 @@ body {
         object-fit: cover;
         width: 100%;
     }
-
-    /*.restaurants-img-landscape {
-        align-self: flex-end;
-    }*/
 
     .restaurants-img-portrait {
         align-self: center;
@@ -425,5 +394,3 @@ body {
         width: 80%;
     }
 }
-    
-

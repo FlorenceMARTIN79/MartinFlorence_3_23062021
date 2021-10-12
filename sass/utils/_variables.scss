@@ -1,11 +1,12 @@
+/*special fonts used for the site*/
 @font-face {
     font-family: 'robotoregular';
     src: url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot');
     src: url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
-         url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
-         url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+        url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
+        url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+        url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+        url('../../Fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,11 +15,11 @@
     font-family: 'Shrikhand';
     font-style: normal;
     font-weight: normal;
-    src:    url('../../Fonts/Shrikhand/Shrikhand-Regular.woff') format('woff'),
-            url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.eot') format('eot'),
-            url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.svg') format('svg'),
-            url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.ttf') format('ttf'),
-            url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.woff2') format('woff2');
+    src: url('../../Fonts/Shrikhand/Shrikhand-Regular.woff') format('woff'),
+        url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.eot') format('eot'),
+        url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.svg') format('svg'),
+        url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.ttf') format('ttf'),
+        url('../../Fonts/Shrikhand/shrikhand-v6-latin-regular.woff2') format('woff2');
 }
 
 /*color variables*/
@@ -34,25 +35,23 @@ $font-logo: 'Shrikhand';
 $font-text: "robotoregular";
 
 /*dimensions variables*/
-$radius: 30px 30px 0 0 ;
+$radius: 30px 30px 0 0;
 
 /*animations loops variables*/
-$dishes: entrees, plats, desserts;
+$dishes: entrees,
+plats,
+desserts;
 
-$menu-display-delais: (
-    entrees: 0ms,
+$menu-display-delais: (entrees: 0ms,
     plats: 800ms,
-    desserts: 1600ms
-);
+    desserts: 1600ms);
 
 /*media queries maps*/
-$breakpoints: (
-    large: 1400px,
+$breakpoints: (large: 1400px,
     desktop: 992px,
     tablet: 576px,
     bigmobile: 430px,
-    under279px: 278px
-    );
+    under279px: 278px);
 
 /*keyframes variables*/
 $menu-selection_speed: 400ms;

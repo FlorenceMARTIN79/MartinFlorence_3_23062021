@@ -1,35 +1,37 @@
+/*media queries for responsive layout*/
 @mixin under279px {
-    @media screen and (max-width: map-get($breakpoints, under279px)){
+    @media screen and (max-width: map-get($breakpoints, under279px)) {
         @content;
     }
 }
 
 @mixin bigmobile {
-    @media screen and (min-width: map-get($breakpoints, bigmobile)){
+    @media screen and (min-width: map-get($breakpoints, bigmobile)) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (min-width: map-get($breakpoints, tablet)){
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)){
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }
 
 @mixin large {
-    @media screen and (min-width: map-get($breakpoints, large)){
+    @media screen and (min-width: map-get($breakpoints, large)) {
         @content;
     }
 }
 
-@mixin footer-padding  {
-    padding-left : 22px;
+/*mixins regarding general layout*/
+@mixin footer-padding {
+    padding-left: 22px;
     padding-right: 22px;
 
     @include under279px {
@@ -47,14 +49,11 @@
     margin-bottom: 0.5rem;
 }
 
-@mixin block-margin{
+@mixin block-margin {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-
-
-@mixin btn-shadow($color: $shadow-color){
+@mixin btn-shadow($color: $shadow-color) {
     box-shadow: 0 5px 20px $color;
 }
-

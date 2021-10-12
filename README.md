@@ -16,28 +16,26 @@
 ***
 ## General Info
 ***
-__Prototype of .__
+__Prototype of the design of an online booking of restaurant meals.__
 ***
-This site allows users to ...
+This site allows users to choose a restaurant and book dishes.
 ***
 The model has to be integrated to fulfill responsive requirements for computers screens as well as for mobiles and tablets.
 ***
 ***
 ## Technologies
 ***
-This project has to be carried out with HTLM5 and CSS3. No other computer language should be used. Frameworks and pre-compilers .
+This project has to be carried out with HTLM5 and CSS3. No other computer language should be used. Frameworks and pre-compilers are not allowed in this project.
 ***
 ***
 ## Graphical Charter
 ***
-__Fonts used__ : 
+__Fonts used__ : Roboto and Shrikhand
 ***
-__Colors__ : 
+__Colors__ : #9356DC ; #FF79DA ; #99E2D0
 ***
 ***
 ## Constraints
-***
-
 ***
 Whatever the screen type used by the users, no element should be cut and the text should have a comfortable size.
 ***

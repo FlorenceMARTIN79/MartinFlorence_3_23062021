@@ -2,18 +2,18 @@ header {
     display: flex;
     max-width: 100%;
     margin-top: 0.5rem;
-    /*@include footer-padding;*/
 
     @include tablet {
         min-width: 100%;
     }
-    
+
     .logo {
         width: 100%;
         display: flex;
         justify-content: center;
-    
+
     }
+
     img {
         object-fit: contain;
         width: 50%;
@@ -42,4 +42,3 @@ header {
         margin-bottom: 0;
     }
 }
-
